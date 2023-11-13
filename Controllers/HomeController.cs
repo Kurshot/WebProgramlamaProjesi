@@ -15,7 +15,7 @@ namespace WebProgramlamaProjesi.Controllers
 
         public IActionResult Index()
         {
-            ViewData["slm"] = "Selam";
+            ViewData["slm"] = "deneme";
             return View();
         }
 
