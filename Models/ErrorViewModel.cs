@@ -1,4 +1,4 @@
-namespace WebProgramlamaProjesi.Models
+namespace Web_Programlama_Dersi_Proje_Ödevi.Models
 {
     public class ErrorViewModel
     {

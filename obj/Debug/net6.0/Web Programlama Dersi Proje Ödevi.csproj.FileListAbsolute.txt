@@ -1,0 +1,88 @@
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\appsettings.json
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\Web Programlama Dersi Proje Ödevi.staticwebassets.runtime.json
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\Web Programlama Dersi Proje Ödevi.exe
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\Web Programlama Dersi Proje Ödevi.deps.json
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\Web Programlama Dersi Proje Ödevi.runtimeconfig.json
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\Web Programlama Dersi Proje Ödevi.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\Web Programlama Dersi Proje Ödevi.pdb
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\obj\Debug\net6.0\Web Programlama Dersi Proje Ödevi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\obj\Debug\net6.0\Web Programlama Dersi Proje Ödevi.AssemblyInfoInputs.cache
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\obj\Debug\net6.0\Web Programlama Dersi Proje Ödevi.AssemblyInfo.cs
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\obj\Debug\net6.0\Web Programlama Dersi Proje Ödevi.csproj.CoreCompileInputs.cache
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\obj\Debug\net6.0\Web Programlama Dersi Proje Ödevi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\obj\Debug\net6.0\Web Programlama Dersi Proje Ödevi.RazorAssemblyInfo.cache
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\obj\Debug\net6.0\Web Programlama Dersi Proje Ödevi.RazorAssemblyInfo.cs
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\obj\Debug\net6.0\staticwebassets\msbuild.Web Programlama Dersi Proje Ödevi.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\obj\Debug\net6.0\staticwebassets\msbuild.build.Web Programlama Dersi Proje Ödevi.props
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Web Programlama Dersi Proje Ödevi.props
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Web Programlama Dersi Proje Ödevi.props
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\obj\Debug\net6.0\scopedcss\bundle\Web Programlama Dersi Proje Ödevi.styles.css
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\obj\Debug\net6.0\scopedcss\projectbundle\Web Programlama Dersi Proje Ödevi.bundle.scp.css
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\obj\Debug\net6.0\Web Programlama Dersi Proje Ödevi.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\obj\Debug\net6.0\refint\Web Programlama Dersi Proje Ödevi.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\obj\Debug\net6.0\Web Programlama Dersi Proje Ödevi.pdb
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\obj\Debug\net6.0\Web Programlama Dersi Proje Ödevi.genruntimeconfig.cache
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\obj\Debug\net6.0\ref\Web Programlama Dersi Proje Ödevi.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\obj\Debug\net6.0\Web Programlama Dersi Proje Ödevi.csproj.AssemblyReference.cache
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\obj\Debug\net6.0\Web Programlama Dersi Proje Ödevi.csproj.CopyComplete
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\Azure.Core.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\Azure.Identity.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\Humanizer.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\Microsoft.SqlServer.Server.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\Mono.TextTemplating.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\System.CodeDom.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\System.Memory.Data.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\System.Text.Json.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\Kursat\source\repos\Web Programlama Dersi Proje Ödevi\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll

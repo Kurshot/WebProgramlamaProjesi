@@ -1,21 +1,43 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-using WebProgramlamaProjesi.Models;
+using Web_Programlama_Dersi_Proje_Ödevi.Data;
+using Web_Programlama_Dersi_Proje_Ödevi.Models;
 
-namespace WebProgramlamaProjesi.Controllers
+namespace Web_Programlama_Dersi_Proje_Ödevi.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly AppDbContext _context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(AppDbContext context)
         {
-            _logger = logger;
+            _context = context;
         }
 
         public IActionResult Index()
         {
-            ViewData["slm"] = "deneme";
+            return View();
+        }
+
+        public IActionResult AddProduct()
+        {
+            var newProduct = new Product
+            {
+                FirstName = "deneme isim"
+            };
+
+            _context.Products.Add(newProduct);
+            _context.SaveChanges();
+
+            return RedirectToAction("ListProducts");
+        }
+
+        public IActionResult ListProducts()
+        {
+            var _allProducts = _context.Products.ToList();
+            
+            ViewBag.Products = _allProducts;
+
             return View();
         }
 
