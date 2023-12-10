@@ -5,7 +5,7 @@
 namespace Web_Programlama_Dersi_Proje_Ödevi.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class FirstMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

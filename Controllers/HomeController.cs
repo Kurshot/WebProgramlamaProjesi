@@ -19,28 +19,6 @@ namespace Web_Programlama_Dersi_Proje_Ödevi.Controllers
             return View();
         }
 
-        public IActionResult AddProduct()
-        {
-            var newProduct = new Product
-            {
-                FirstName = "deneme isim"
-            };
-
-            _context.Products.Add(newProduct);
-            _context.SaveChanges();
-
-            return RedirectToAction("ListProducts");
-        }
-
-        public IActionResult ListProducts()
-        {
-            var _allProducts = _context.Products.ToList();
-            
-            ViewBag.Products = _allProducts;
-
-            return View();
-        }
-
         public IActionResult Privacy()
         {
             return View();

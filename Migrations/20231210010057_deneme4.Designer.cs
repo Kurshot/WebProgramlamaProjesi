@@ -11,8 +11,8 @@ using Web_Programlama_Dersi_Proje_Ödevi.Data;
 namespace Web_Programlama_Dersi_Proje_Ödevi.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20231130202125_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20231210010057_deneme4")]
+    partial class deneme4
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -23,23 +23,6 @@ namespace Web_Programlama_Dersi_Proje_Ödevi.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-
-            modelBuilder.Entity("Web_Programlama_Dersi_Proje_Ödevi.Models.Product", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("FirstName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Products");
-                });
 #pragma warning restore 612, 618
         }
     }
