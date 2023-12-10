@@ -6,6 +6,7 @@ namespace Web_Programlama_Dersi_Proje_Ödevi.Models
     public class Flight
     {
         [Key]
+        [Required]
         public int Id { get; set; }
         public virtual Plane Plane { get; set; }
 

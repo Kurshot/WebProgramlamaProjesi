@@ -7,9 +7,14 @@ namespace Web_Programlama_Dersi_Proje_Ödevi.Models
     public class User
     {
         [Key]
+        [Required]
         public int Id { get; set; }
         public bool IsAdmin { get; set; }
+        [Required]
+        [MaxLength(30)]
         public string Name { get; set; }
+        [Required]
+        [MaxLength(30)]
         public string LastName { get; set; }
         public bool Gender { get; set; }
         public string Email { get; set; }
