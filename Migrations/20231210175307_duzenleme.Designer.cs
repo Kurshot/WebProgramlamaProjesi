@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Web_Programlama_Dersi_Proje_Ödevi.Data;
 
@@ -11,9 +12,11 @@ using Web_Programlama_Dersi_Proje_Ödevi.Data;
 namespace Web_Programlama_Dersi_Proje_Ödevi.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231210175307_duzenleme")]
+    partial class duzenleme
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -121,26 +124,29 @@ namespace Web_Programlama_Dersi_Proje_Ödevi.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("ArrivalPlaceId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("ArrivalTime")
                         .HasColumnType("datetime2");
+
+                    b.Property<int>("DeparturePlaceId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("DepartureTime")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("PlaneId")
+                        .HasColumnType("int");
+
                     b.Property<float>("Price")
                         .HasColumnType("real");
 
-                    b.Property<int>("arrivalPlaceIdId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("departurePlaceIdId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("arrivalPlaceIdId");
+                    b.HasIndex("ArrivalPlaceId");
 
-                    b.HasIndex("departurePlaceIdId");
+                    b.HasIndex("PlaneId");
 
                     b.ToTable("Flights");
                 });
@@ -156,17 +162,12 @@ namespace Web_Programlama_Dersi_Proje_Ödevi.Migrations
                     b.Property<int>("CompanyId")
                         .HasColumnType("int");
 
-                    b.Property<int>("FlightId")
-                        .HasColumnType("int");
-
                     b.Property<int>("TypeId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.HasIndex("CompanyId");
-
-                    b.HasIndex("FlightId");
 
                     b.HasIndex("TypeId");
 
@@ -291,21 +292,21 @@ namespace Web_Programlama_Dersi_Proje_Ödevi.Migrations
 
             modelBuilder.Entity("Web_Programlama_Dersi_Proje_Ödevi.Models.Flight", b =>
                 {
-                    b.HasOne("Web_Programlama_Dersi_Proje_Ödevi.Models.Airport", "arrivalPlaceId")
-                        .WithMany()
-                        .HasForeignKey("arrivalPlaceIdId")
+                    b.HasOne("Web_Programlama_Dersi_Proje_Ödevi.Models.Airport", "ArrivalPlace")
+                        .WithMany("Flights")
+                        .HasForeignKey("ArrivalPlaceId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Web_Programlama_Dersi_Proje_Ödevi.Models.Airport", "departurePlaceId")
-                        .WithMany()
-                        .HasForeignKey("departurePlaceIdId")
+                    b.HasOne("Web_Programlama_Dersi_Proje_Ödevi.Models.Plane", "Plane")
+                        .WithMany("Flights")
+                        .HasForeignKey("PlaneId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("arrivalPlaceId");
+                    b.Navigation("ArrivalPlace");
 
-                    b.Navigation("departurePlaceId");
+                    b.Navigation("Plane");
                 });
 
             modelBuilder.Entity("Web_Programlama_Dersi_Proje_Ödevi.Models.Plane", b =>
@@ -316,12 +317,6 @@ namespace Web_Programlama_Dersi_Proje_Ödevi.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Web_Programlama_Dersi_Proje_Ödevi.Models.Flight", "Flight")
-                        .WithMany("Planes")
-                        .HasForeignKey("FlightId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("Web_Programlama_Dersi_Proje_Ödevi.Models.PlaneType", "Type")
                         .WithMany("Planes")
                         .HasForeignKey("TypeId")
@@ -329,8 +324,6 @@ namespace Web_Programlama_Dersi_Proje_Ödevi.Migrations
                         .IsRequired();
 
                     b.Navigation("Company");
-
-                    b.Navigation("Flight");
 
                     b.Navigation("Type");
                 });
@@ -354,6 +347,11 @@ namespace Web_Programlama_Dersi_Proje_Ödevi.Migrations
                     b.Navigation("TicketHolder");
                 });
 
+            modelBuilder.Entity("Web_Programlama_Dersi_Proje_Ödevi.Models.Airport", b =>
+                {
+                    b.Navigation("Flights");
+                });
+
             modelBuilder.Entity("Web_Programlama_Dersi_Proje_Ödevi.Models.City", b =>
                 {
                     b.Navigation("Airports");
@@ -369,9 +367,9 @@ namespace Web_Programlama_Dersi_Proje_Ödevi.Migrations
                     b.Navigation("Cities");
                 });
 
-            modelBuilder.Entity("Web_Programlama_Dersi_Proje_Ödevi.Models.Flight", b =>
+            modelBuilder.Entity("Web_Programlama_Dersi_Proje_Ödevi.Models.Plane", b =>
                 {
-                    b.Navigation("Planes");
+                    b.Navigation("Flights");
                 });
 
             modelBuilder.Entity("Web_Programlama_Dersi_Proje_Ödevi.Models.PlaneType", b =>

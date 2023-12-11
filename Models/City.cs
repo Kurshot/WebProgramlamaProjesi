@@ -10,7 +10,7 @@ namespace Web_Programlama_Dersi_Proje_Ödevi.Models
         [Required]
         [MaxLength(30)]
         public string CityName { get; set; }
-        public virtual Country Country { get; set; }
+        public  Country Country { get; set; }
         public ICollection<Airport> Airports { get; set; }
 
     }

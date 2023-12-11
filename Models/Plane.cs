@@ -7,9 +7,8 @@ namespace Web_Programlama_Dersi_Proje_Ödevi.Models
         [Key]
         [Required]
         public int Id { get; set; }
-        public virtual Company Company { get; set; }
-        public virtual PlaneType Type { get; set; }
-        public ICollection<Flight> Flights { get; set; }
-
+        public Company Company { get; set; }
+        public PlaneType Type { get; set; }
+        public Flight Flight { get; set; }  
     }
 }
