@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Web_Programlama_Dersi_Proje_Ödevi.Models
 {
@@ -14,6 +15,7 @@ namespace Web_Programlama_Dersi_Proje_Ödevi.Models
         [MaxLength(5)]
         public string AirportCode { get; set; }
         public virtual City City { get; set; }
+        [NotMapped]
         public ICollection<Flight> Flights { get; set; }
 
  
