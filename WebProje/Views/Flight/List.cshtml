@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<WebProje.Models.Flight>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "List";
 }
 
-<h1>Index</h1>
+<h1>List</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -12,6 +12,12 @@
 <table class="table">
     <thead>
         <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DeparturePlaceId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ArrivalPlaceId)
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.DepartureTime)
             </th>
@@ -27,6 +33,12 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeparturePlaceId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArrivalPlaceId)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.DepartureTime)
             </td>

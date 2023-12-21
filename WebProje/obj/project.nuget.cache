@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lI3xeMnnPMpKN6Pl7h+jQcJQCrtZ0iGeezonvK92WIzyqegiJL1cxpy9jaU88krcpEmohlf4Ng4Lab5vbjiVyg==",
+  "dgSpecHash": "W7C1YGFA0DZjz1WiDMyWLd1ku1ktHkrrzHJdsDwFrxF0yBUR+5cG0q+cevcVkNqKnTNQKNTYi9jQDmvtbeRMhA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\polat\\source\\repos\\WebProje\\WebProje\\WebProje.csproj",
+  "projectFilePath": "C:\\Users\\polat\\source\\repos\\WebProgramlamaProjesi\\WebProje\\WebProje.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\polat\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\polat\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

@@ -16,6 +16,7 @@ namespace WebProje.Models
         [MaxLength(5)]
         public string AirportCode { get; set; }
         public virtual City City { get; set; }
+        public int CityId { get; set; }
         [NotMapped]
         public ICollection<Flight> ?Flights { get; set; }
     }

@@ -11133,11 +11133,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\polat\\source\\repos\\WebProje\\WebProje\\WebProje.csproj",
+      "projectUniqueName": "C:\\Users\\polat\\source\\repos\\WebProgramlamaProjesi\\WebProje\\WebProje.csproj",
       "projectName": "WebProje",
-      "projectPath": "C:\\Users\\polat\\source\\repos\\WebProje\\WebProje\\WebProje.csproj",
+      "projectPath": "C:\\Users\\polat\\source\\repos\\WebProgramlamaProjesi\\WebProje\\WebProje.csproj",
       "packagesPath": "C:\\Users\\polat\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\polat\\source\\repos\\WebProje\\WebProje\\obj\\",
+      "outputPath": "C:\\Users\\polat\\source\\repos\\WebProgramlamaProjesi\\WebProje\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\polat\\AppData\\Roaming\\NuGet\\NuGet.Config",
