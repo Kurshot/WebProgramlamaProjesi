@@ -12,6 +12,7 @@ namespace WebProje.Models
         [MaxLength(30)]
         public string CityName { get; set; }
         public Country Country { get; set; }
+        public int CountryId { get; set; }
         public ICollection<Airport> Airports { get; set; }
 
     }

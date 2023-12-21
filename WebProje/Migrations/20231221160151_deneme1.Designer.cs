@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebProje.Models;
 
@@ -11,9 +12,10 @@ using WebProje.Models;
 namespace WebProje.Migrations
 {
     [DbContext(typeof(OriAirlinesContext))]
-    partial class OriAirlinesContextModelSnapshot : ModelSnapshot
+    [Migration("20231221160151_deneme1")]
+    partial class deneme1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -121,6 +123,9 @@ namespace WebProje.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
+                    b.Property<int>("AirportId")
+                        .HasColumnType("int");
+
                     b.Property<int>("ArrivalPlaceId")
                         .HasColumnType("int");
 
@@ -137,6 +142,8 @@ namespace WebProje.Migrations
                         .HasColumnType("real");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("AirportId");
 
                     b.ToTable("Flights");
                 });
@@ -283,6 +290,17 @@ namespace WebProje.Migrations
                         .IsRequired();
 
                     b.Navigation("Country");
+                });
+
+            modelBuilder.Entity("WebProje.Models.Flight", b =>
+                {
+                    b.HasOne("WebProje.Models.Airport", "Airport")
+                        .WithMany()
+                        .HasForeignKey("AirportId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Airport");
                 });
 
             modelBuilder.Entity("WebProje.Models.Plane", b =>

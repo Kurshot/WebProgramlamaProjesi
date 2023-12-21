@@ -8,6 +8,7 @@ namespace WebProje.Models
         [Required]
         public int Id { get; set; }
         public virtual Flight Flight { get; set; }
+        public int FlightId { get; set; }
         public virtual User TicketHolder { get; set; }
         [Required]
         public bool TicketType { get; set; }
