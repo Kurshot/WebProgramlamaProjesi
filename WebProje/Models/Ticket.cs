@@ -5,13 +5,11 @@ namespace WebProje.Models
     public class Ticket
     {
         [Key]
-        [Required]
         public int Id { get; set; }
-        public virtual Flight Flight { get; set; }
+        public bool ticketType { get; set; }
+        public float ticketPrice { get; set; }
+        public int UserId { get; set; }
         public int FlightId { get; set; }
-        public virtual User TicketHolder { get; set; }
-        [Required]
-        public bool TicketType { get; set; }
-        public float TicketPrice { get; set; }
+        public Flight Flight { get; set; }
     }
 }

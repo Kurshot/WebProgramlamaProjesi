@@ -5,13 +5,13 @@ namespace WebProje.Models
     public class Plane
     {
         [Key]
-        [Required]
         public int Id { get; set; }
-        public Company Company { get; set; }
+        [Display(Name ="Marka Adı")]
+        public string BrandName { get; set; }
         public int CompanyId { get; set; }
-        public PlaneType Type { get; set; }
-        public int TypeId { get; set; }
-        public Flight Flight { get; set; }
-        public int FlightId { get; set;}
+        public int PlaneTypeId { get; set; }
+        public Company Company { get; set; }
+        public PlaneType PlaneType { get; set; }
+        public ICollection<Flight>? Flights { get; set; }
     }
 }

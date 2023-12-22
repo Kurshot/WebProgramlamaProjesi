@@ -1,23 +1,18 @@
-﻿using static Humanizer.In;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace WebProje.Models
 {
     public class Airport
     {
         [Key]
-        [Required]
         public int Id { get; set; }
-        [Required]
-        [MaxLength(25)]
+        [Display(Name ="Havalimanı Adı")]
         public string AirportName { get; set; }
-        [Required]
-        [MaxLength(5)]
+        [Display(Name = "Havalimanı Kodu")]
         public string AirportCode { get; set; }
-        public virtual City City { get; set; }
         public int CityId { get; set; }
-        [NotMapped]
-        public ICollection<Flight> ?Flights { get; set; }
+        public City City { get; set; }
+        public ICollection<Flight> Flights { get; set; }
+        public ICollection<Flight> Flights1 { get; set; }
     }
 }
