@@ -5,11 +5,9 @@ namespace WebProje.Models
     public class Country
     {
         [Key]
-        [Required]
         public int Id { get; set; }
-        [Required]
-        [MaxLength(35)]
-        public string CountryName { get; set; }
-        public ICollection<City> Cities { get; set; }
+        [Display(Name ="Şirket Adı")]
+        public string Name { get; set; }
+        public ICollection<City>? Cities { get; set; }
     }
 }
