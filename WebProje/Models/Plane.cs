@@ -6,8 +6,6 @@ namespace WebProje.Models
     {
         [Key]
         public int Id { get; set; }
-        [Display(Name ="Marka Adı")]
-        public string BrandName { get; set; }
         public int CompanyId { get; set; }
         public int PlaneTypeId { get; set; }
         public Company Company { get; set; }

@@ -7,9 +7,9 @@ namespace WebProje.Models
         [Key]
         public int Id { get; set; }
         public bool ticketType { get; set; }
-        public float ticketPrice { get; set; }
         public int UserId { get; set; }
         public int FlightId { get; set; }
         public Flight Flight { get; set; }
+        public User User { get; set; }
     }
 }
