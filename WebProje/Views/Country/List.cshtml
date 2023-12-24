@@ -7,8 +7,9 @@
 <h1>List</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Add">Create New</a>
 </p>
+<p style="color:red">@TempData["msjco"]</p>
 <table class="table">
     <thead>
         <tr>
@@ -33,3 +34,4 @@
 }
     </tbody>
 </table>
+

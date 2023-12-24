@@ -9,125 +9,129 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WebProje
 build_property.RootNamespace = WebProje
-build_property.ProjectDir = C:\Users\polat\source\repos\WebProgramlamaProjesi\WebProje\
+build_property.ProjectDir = C:\Users\Kursat\Desktop\WebProgramlamaProjesi\WebProje\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\polat\source\repos\WebProgramlamaProjesi\WebProje
+build_property.MSBuildProjectDirectory = C:\Users\Kursat\Desktop\WebProgramlamaProjesi\WebProje
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/polat/source/repos/WebProgramlamaProjesi/WebProje/Areas/Identity/Pages/_ViewStart.cshtml]
+[C:/Users/Kursat/Desktop/WebProgramlamaProjesi/WebProje/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/polat/source/repos/WebProgramlamaProjesi/WebProje/Views/Airport/Add.cshtml]
+[C:/Users/Kursat/Desktop/WebProgramlamaProjesi/WebProje/Views/Airport/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWlycG9ydFxBZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/polat/source/repos/WebProgramlamaProjesi/WebProje/Views/Airport/Edit.cshtml]
+[C:/Users/Kursat/Desktop/WebProgramlamaProjesi/WebProje/Views/Airport/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWlycG9ydFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/polat/source/repos/WebProgramlamaProjesi/WebProje/Views/Airport/List.cshtml]
+[C:/Users/Kursat/Desktop/WebProgramlamaProjesi/WebProje/Views/Airport/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWlycG9ydFxMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/polat/source/repos/WebProgramlamaProjesi/WebProje/Views/City/Add.cshtml]
+[C:/Users/Kursat/Desktop/WebProgramlamaProjesi/WebProje/Views/City/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0eVxBZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/polat/source/repos/WebProgramlamaProjesi/WebProje/Views/City/Index.cshtml]
+[C:/Users/Kursat/Desktop/WebProgramlamaProjesi/WebProje/Views/City/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0eVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kursat/Desktop/WebProgramlamaProjesi/WebProje/Views/City/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0eVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/polat/source/repos/WebProgramlamaProjesi/WebProje/Views/City/List.cshtml]
+[C:/Users/Kursat/Desktop/WebProgramlamaProjesi/WebProje/Views/City/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0eVxMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/polat/source/repos/WebProgramlamaProjesi/WebProje/Views/Company/Add.cshtml]
+[C:/Users/Kursat/Desktop/WebProgramlamaProjesi/WebProje/Views/Company/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxBZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/polat/source/repos/WebProgramlamaProjesi/WebProje/Views/Company/Edit.cshtml]
+[C:/Users/Kursat/Desktop/WebProgramlamaProjesi/WebProje/Views/Company/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/polat/source/repos/WebProgramlamaProjesi/WebProje/Views/Company/List.cshtml]
+[C:/Users/Kursat/Desktop/WebProgramlamaProjesi/WebProje/Views/Company/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/polat/source/repos/WebProgramlamaProjesi/WebProje/Views/Country/Add.cshtml]
+[C:/Users/Kursat/Desktop/WebProgramlamaProjesi/WebProje/Views/Country/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bnRyeVxBZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/polat/source/repos/WebProgramlamaProjesi/WebProje/Views/Country/Edit.cshtml]
+[C:/Users/Kursat/Desktop/WebProgramlamaProjesi/WebProje/Views/Country/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bnRyeVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/polat/source/repos/WebProgramlamaProjesi/WebProje/Views/Country/List.cshtml]
+[C:/Users/Kursat/Desktop/WebProgramlamaProjesi/WebProje/Views/Country/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bnRyeVxMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/polat/source/repos/WebProgramlamaProjesi/WebProje/Views/Flight/Add.cshtml]
+[C:/Users/Kursat/Desktop/WebProgramlamaProjesi/WebProje/Views/Flight/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxpZ2h0XEFkZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/polat/source/repos/WebProgramlamaProjesi/WebProje/Views/Flight/Edit.cshtml]
+[C:/Users/Kursat/Desktop/WebProgramlamaProjesi/WebProje/Views/Flight/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxpZ2h0XEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/polat/source/repos/WebProgramlamaProjesi/WebProje/Views/Flight/List.cshtml]
+[C:/Users/Kursat/Desktop/WebProgramlamaProjesi/WebProje/Views/Flight/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxpZ2h0XExpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/polat/source/repos/WebProgramlamaProjesi/WebProje/Views/Home/Index.cshtml]
+[C:/Users/Kursat/Desktop/WebProgramlamaProjesi/WebProje/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/polat/source/repos/WebProgramlamaProjesi/WebProje/Views/Home/Privacy.cshtml]
+[C:/Users/Kursat/Desktop/WebProgramlamaProjesi/WebProje/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/polat/source/repos/WebProgramlamaProjesi/WebProje/Views/Shared/Error.cshtml]
+[C:/Users/Kursat/Desktop/WebProgramlamaProjesi/WebProje/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/polat/source/repos/WebProgramlamaProjesi/WebProje/Views/Shared/_LoginPartial.cshtml]
+[C:/Users/Kursat/Desktop/WebProgramlamaProjesi/WebProje/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/polat/source/repos/WebProgramlamaProjesi/WebProje/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Kursat/Desktop/WebProgramlamaProjesi/WebProje/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/polat/source/repos/WebProgramlamaProjesi/WebProje/Views/Ticket/Add.cshtml]
+[C:/Users/Kursat/Desktop/WebProgramlamaProjesi/WebProje/Views/Ticket/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlja2V0XEFkZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/polat/source/repos/WebProgramlamaProjesi/WebProje/Views/Ticket/List.cshtml]
+[C:/Users/Kursat/Desktop/WebProgramlamaProjesi/WebProje/Views/Ticket/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlja2V0XExpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/polat/source/repos/WebProgramlamaProjesi/WebProje/Views/User/Add.cshtml]
+[C:/Users/Kursat/Desktop/WebProgramlamaProjesi/WebProje/Views/User/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxBZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/polat/source/repos/WebProgramlamaProjesi/WebProje/Views/User/Edit.cshtml]
+[C:/Users/Kursat/Desktop/WebProgramlamaProjesi/WebProje/Views/User/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/polat/source/repos/WebProgramlamaProjesi/WebProje/Views/User/List.cshtml]
+[C:/Users/Kursat/Desktop/WebProgramlamaProjesi/WebProje/Views/User/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/polat/source/repos/WebProgramlamaProjesi/WebProje/Views/_ViewImports.cshtml]
+[C:/Users/Kursat/Desktop/WebProgramlamaProjesi/WebProje/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/polat/source/repos/WebProgramlamaProjesi/WebProje/Views/_ViewStart.cshtml]
+[C:/Users/Kursat/Desktop/WebProgramlamaProjesi/WebProje/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/polat/source/repos/WebProgramlamaProjesi/WebProje/Views/Shared/_Layout.cshtml]
+[C:/Users/Kursat/Desktop/WebProgramlamaProjesi/WebProje/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-wp3nozgae1

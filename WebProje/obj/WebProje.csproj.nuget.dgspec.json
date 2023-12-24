@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\polat\\source\\repos\\WebProgramlamaProjesi\\WebProje\\WebProje.csproj": {}
+    "C:\\Users\\Kursat\\Desktop\\WebProgramlamaProjesi\\WebProje\\WebProje.csproj": {}
   },
   "projects": {
-    "C:\\Users\\polat\\source\\repos\\WebProgramlamaProjesi\\WebProje\\WebProje.csproj": {
+    "C:\\Users\\Kursat\\Desktop\\WebProgramlamaProjesi\\WebProje\\WebProje.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\polat\\source\\repos\\WebProgramlamaProjesi\\WebProje\\WebProje.csproj",
+        "projectUniqueName": "C:\\Users\\Kursat\\Desktop\\WebProgramlamaProjesi\\WebProje\\WebProje.csproj",
         "projectName": "WebProje",
-        "projectPath": "C:\\Users\\polat\\source\\repos\\WebProgramlamaProjesi\\WebProje\\WebProje.csproj",
-        "packagesPath": "C:\\Users\\polat\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\polat\\source\\repos\\WebProgramlamaProjesi\\WebProje\\obj\\",
+        "projectPath": "C:\\Users\\Kursat\\Desktop\\WebProgramlamaProjesi\\WebProje\\WebProje.csproj",
+        "packagesPath": "C:\\Users\\Kursat\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Kursat\\Desktop\\WebProgramlamaProjesi\\WebProje\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\polat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Kursat\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -90,7 +90,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

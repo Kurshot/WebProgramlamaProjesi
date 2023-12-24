@@ -47,6 +47,7 @@ namespace WebProje.Controllers
                 TempData["msjco"] = "Bu şirketin uçakları var lütfen önce uçakları siliniz";
                 return RedirectToAction("List");
             }
+            TempData["msjco"] = "Şirket başarıyla silindi.";
             o.Company.Remove(c);
             o.SaveChanges();
             return RedirectToAction("List");
