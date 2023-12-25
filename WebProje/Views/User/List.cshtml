@@ -1,7 +1,13 @@
 ﻿@model IEnumerable<WebProje.Models.User>
-<p style="color:red">@TempData["msju"]</p>
+
+@{
+    ViewData["Title"] = "List";
+}
+
+<h1>List</h1>
+
 <p>
-    <a asp-action="Add">Create New</a>
+    <a asp-action="Create">Create New</a>
 </p>
 <table class="table">
     <thead>
@@ -20,9 +26,6 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.phoneNumber)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IsAdmin)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Gender)
@@ -52,24 +55,7 @@
                 @Html.DisplayFor(modelItem => item.phoneNumber)
             </td>
             <td>
-                    @if (item.IsAdmin == true)
-                    {
-                        <p>Admin</p>
-                    }
-                    else
-                    {
-                        <p>Kullanıcı</p>
-                    }
-            </td>
-            <td>
-                    @if (item.Gender == true)
-                    {
-                        <p>Erkek</p>
-                    }
-                    else
-                    {
-                        <p>Kadın</p>
-                    }
+                @Html.DisplayFor(modelItem => item.Gender)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.birthdate)
