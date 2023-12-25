@@ -16,9 +16,10 @@ namespace WebProje.Models
         public string Password { get; set; }
         [Display(Name = "Telefon numarası")]
         public string phoneNumber { get; set; }
-        public bool IsAdmin { get; set; }
         public bool Gender { get; set; }
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime birthdate { get; set; }
         public ICollection<Ticket>? Ticket { get; set; }
+        public ICollection<Rolles>? Rolles { get; set; }
     }
 }
