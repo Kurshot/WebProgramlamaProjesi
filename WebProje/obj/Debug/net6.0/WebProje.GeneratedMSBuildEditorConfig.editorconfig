@@ -16,10 +16,6 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\polat\source\repos\WebProgramlamaProjesi\WebProje
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/polat/source/repos/WebProgramlamaProjesi/WebProje/Areas/Identity/Pages/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/polat/source/repos/WebProgramlamaProjesi/WebProje/Views/Airport/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWlycG9ydFxBZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -90,14 +86,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/polat/source/repos/WebProgramlamaProjesi/WebProje/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/polat/source/repos/WebProgramlamaProjesi/WebProje/Views/Rolles/Add.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sbGVzXEFkZC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/polat/source/repos/WebProgramlamaProjesi/WebProje/Views/Rolles/List.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sbGVzXExpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/polat/source/repos/WebProgramlamaProjesi/WebProje/Views/Shared/Error.cshtml]

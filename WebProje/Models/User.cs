@@ -1,8 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations;
 
 namespace WebProje.Models
 {
-    public class User
+    public class User:IdentityUser<int>
     {
         [Key]
         public int Id { get; set; }
@@ -14,12 +15,9 @@ namespace WebProje.Models
         public string Email { get; set; }
         [Display(Name = "Şifre")]
         public string Password { get; set; }
-        [Display(Name = "Telefon numarası")]
-        public string phoneNumber { get; set; }
         public bool Gender { get; set; }
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime birthdate { get; set; }
         public ICollection<Ticket>? Ticket { get; set; }
-        public ICollection<Rolles>? Rolles { get; set; }
     }
 }

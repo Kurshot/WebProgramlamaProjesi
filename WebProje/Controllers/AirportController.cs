@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using WebProje.Models;
@@ -7,7 +8,12 @@ namespace WebProje.Controllers
 {
     public class AirportController : Controller
     {
-        public OriAirlinesContext o = new OriAirlinesContext();
+        private readonly OriAirlinesContext o;
+        public AirportController(OriAirlinesContext o)
+        {
+            this.o = o;
+        }
+        [Authorize(Roles ="Admin")]
         public IActionResult List()
         {
             var list = o.Airports.Include(x => x.City);

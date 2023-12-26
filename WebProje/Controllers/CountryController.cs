@@ -6,7 +6,11 @@ namespace WebProje.Controllers
 {
     public class CountryController : Controller
     {
-        public OriAirlinesContext o = new OriAirlinesContext();
+        private readonly OriAirlinesContext o;
+        public CountryController(OriAirlinesContext o)
+        {
+            this.o = o;
+        }
         public IActionResult List()
         {
             var list = o.Countries.ToList();

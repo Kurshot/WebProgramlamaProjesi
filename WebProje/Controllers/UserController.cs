@@ -6,7 +6,11 @@ namespace WebProje.Controllers
 {
     public class UserController : Controller
     {
-        public OriAirlinesContext o = new OriAirlinesContext();
+        private readonly OriAirlinesContext o;
+        public UserController(OriAirlinesContext o)
+        {
+            this.o = o;
+        }
         public IActionResult List()
         {
             var list = o.Users.ToList();
@@ -23,13 +27,6 @@ namespace WebProje.Controllers
             if (ModelState.IsValid)
             {
                 o.Users.Add(u);
-                o.SaveChanges();
-                var role = new Rolles
-                {
-                    roleTypeId = 2,
-                    UserId = u.Id
-                };
-                o.Rolles.Add(role);
                 o.SaveChanges();
                 return RedirectToAction("List");
             }
