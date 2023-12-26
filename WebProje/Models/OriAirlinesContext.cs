@@ -25,8 +25,6 @@ namespace WebProje.Models
         public DbSet<PlaneType> PlaneTypes { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Flight> Flights { get; set; }
-        public DbSet<Rolles> Rolles { get; set; }
-        public DbSet<RoleType> RoleTypes { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;
