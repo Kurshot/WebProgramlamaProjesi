@@ -6,7 +6,7 @@ namespace WebProje.Models
     {
         [Key]
         public int Id { get; set; }
-        [Display(Name ="Şirket Adı")]
+        [Display(Name ="Ülke Adı")]
         public string Name { get; set; }
         public ICollection<City>? Cities { get; set; }
     }

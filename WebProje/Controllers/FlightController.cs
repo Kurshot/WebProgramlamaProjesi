@@ -1,15 +1,17 @@
 ﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using webproje.Data;
 using WebProje.Models;
 
 namespace WebProje.Controllers
 {
     public class FlightController : Controller
     {
-        private readonly OriAirlinesContext o;
-        public FlightController(OriAirlinesContext o)
+        private readonly ApplicationDbContext o;
+        public FlightController(ApplicationDbContext o)
         {
             this.o = o;
         }
@@ -17,8 +19,8 @@ namespace WebProje.Controllers
         {
             var list = o.Flights.
                 Include(x => x.departurePlace).
-                Include(y=>y.arrivalPlace).
-                Include(z=>z.Plane.PlaneType);
+                Include(y => y.arrivalPlace).
+                Include(z => z.Plane.PlaneType);
             return View(list.ToList());
         }
         [HttpGet]
@@ -34,7 +36,7 @@ namespace WebProje.Controllers
         public IActionResult Add(Flight f)
         {
             if (ModelState.IsValid)
-            { 
+            {
                 o.Flights.Add(f);
                 o.SaveChanges();
                 TempData["msj"] = "Uçuş eklendi";
@@ -53,12 +55,12 @@ namespace WebProje.Controllers
                 return View();
             }
             var ticket = o.Flights.Include(x => x.Tickets).FirstOrDefault(y => y.Id == id);
-            if(ticket is null)
+            if (ticket is null)
             {
                 TempData["hata"] = "Böyle bir uçuş bulunamadi";
                 return View();
             }
-            if (ticket.Tickets.Count>0)
+            if (ticket.Tickets.Count > 0)
             {
                 TempData["hata"] = "Bu uçuşa ait biletler var önce biletleri siliniz";
                 return View();
@@ -87,7 +89,7 @@ namespace WebProje.Controllers
             return View(ticket);
         }
         [HttpPost]
-        public IActionResult Edit(int ?id,Flight f)
+        public IActionResult Edit(int? id, Flight f)
         {
             if (id != f.Id)
             {

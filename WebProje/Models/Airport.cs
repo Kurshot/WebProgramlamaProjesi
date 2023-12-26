@@ -11,8 +11,8 @@ namespace WebProje.Models
         [Display(Name = "Havalimanı Kodu")]
         public string AirportCode { get; set; }
         public int CityId { get; set; }
-        public City City { get; set; }
-        public ICollection<Flight> Flights { get; set; }
-        public ICollection<Flight> Flights1 { get; set; }
+        public City? City { get; set; }
+        public ICollection<Flight>? Flights { get; set; }
+        public ICollection<Flight>? Flights1 { get; set; }
     }
 }

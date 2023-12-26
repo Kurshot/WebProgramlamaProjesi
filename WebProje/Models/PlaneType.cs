@@ -9,6 +9,6 @@ namespace WebProje.Models
         [Display(Name ="Model ismi")]
         public string modelName { get; set; }
         public int Capacity { get; set; }
-        public ICollection<Plane> Planes { get; set;}
+        public ICollection<Plane>? Planes { get; set;}
     }
 }

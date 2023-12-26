@@ -1,13 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using webproje.Data;
 using WebProje.Models;
 
 namespace WebProje.Controllers
 {
     public class CompanyController : Controller
     {
-        private readonly OriAirlinesContext o;
-        public CompanyController(OriAirlinesContext o)
+        private readonly ApplicationDbContext o;
+        public CompanyController(ApplicationDbContext o)
         {
             this.o = o;
         }

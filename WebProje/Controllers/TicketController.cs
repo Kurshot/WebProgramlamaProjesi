@@ -1,14 +1,15 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using webproje.Data;
 using WebProje.Models;
 
 namespace WebProje.Controllers
 {
     public class TicketController : Controller
     {
-        private readonly OriAirlinesContext o;
-        public TicketController(OriAirlinesContext o)
+        private readonly ApplicationDbContext o;
+        public TicketController(ApplicationDbContext o)
         {
             this.o = o;
         }

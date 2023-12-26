@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace WebProje.Models
 {
-    public class User:IdentityUser<int>
+    public class User : IdentityUser
     {
         [Key]
         public int Id { get; set; }

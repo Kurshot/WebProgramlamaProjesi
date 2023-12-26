@@ -1,14 +1,15 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using webproje.Data;
 using WebProje.Models;
 
 namespace WebProje.Controllers
 {
     public class CityController : Controller
     {
-        private readonly OriAirlinesContext o;
-        public CityController(OriAirlinesContext o)
+        private readonly ApplicationDbContext o;
+        public CityController(ApplicationDbContext o)
         {
             this.o = o;
         }

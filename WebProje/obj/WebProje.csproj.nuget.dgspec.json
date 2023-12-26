@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\polat\\source\\repos\\WebProgramlamaProjesi\\WebProje\\WebProje.csproj": {}
+    "C:\\Users\\polat\\source\\repos\\webproje\\webproje\\webproje.csproj": {}
   },
   "projects": {
-    "C:\\Users\\polat\\source\\repos\\WebProgramlamaProjesi\\WebProje\\WebProje.csproj": {
+    "C:\\Users\\polat\\source\\repos\\webproje\\webproje\\webproje.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\polat\\source\\repos\\WebProgramlamaProjesi\\WebProje\\WebProje.csproj",
-        "projectName": "WebProje",
-        "projectPath": "C:\\Users\\polat\\source\\repos\\WebProgramlamaProjesi\\WebProje\\WebProje.csproj",
+        "projectUniqueName": "C:\\Users\\polat\\source\\repos\\webproje\\webproje\\webproje.csproj",
+        "projectName": "webproje",
+        "projectPath": "C:\\Users\\polat\\source\\repos\\webproje\\webproje\\webproje.csproj",
         "packagesPath": "C:\\Users\\polat\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\polat\\source\\repos\\WebProgramlamaProjesi\\WebProje\\obj\\",
+        "outputPath": "C:\\Users\\polat\\source\\repos\\webproje\\webproje\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\polat\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -54,17 +54,11 @@
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[7.0.14, )"
-            },
-            "Microsoft.EntityFrameworkCore.Sqlite": {
-              "target": "Package",
-              "version": "[6.0.23, )"
+              "version": "[6.0.21, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.14, )"
+              "version": "[6.0.21, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",

@@ -1,42 +1,17 @@
-using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using WebProje.Models;
+using webproje.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddDbContext<OriAirlinesContext>(options =>
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-builder.Services
-    .AddIdentity<User, AppRole>(x =>
-    {
-        x.Password.RequiredLength = 3;
-        x.Password.RequireNonAlphanumeric = false;
-        x.Password.RequireLowercase = false;
-        x.Password.RequireUppercase = false;
-        x.Password.RequireDigit = false;
-
-        x.User.RequireUniqueEmail = true;
-        x.User.AllowedUserNameCharacters = "abcçdefghiýjklmnoöpqrsþtuüvwxyzABCÇDEFGHIÝJKLMNOÖPQRSÞTUÜVWXYZ0123456789";
-    })
-    .AddEntityFrameworkStores<OriAirlinesContext>()
-    .AddDefaultTokenProviders();
-
-builder.Services.AddAuthentication(options =>
-{
-    options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-}).AddCookie(options =>
-{
-    options.LoginPath = new PathString("/Home/Login");
-    options.AccessDeniedPath = new PathString("/Home/Login");
-    options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
-    options.Cookie.MaxAge = options.ExpireTimeSpan; // optional
-    options.SlidingExpiration = true;
-});
+builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+    .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
@@ -63,7 +38,7 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Flight}/{action=List}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 app.MapRazorPages();
 
 app.Run();
