@@ -13,6 +13,8 @@ namespace WebProje.Controllers
         }
         public IActionResult List()
         {
+            int x = 15;
+            int y = 15;
             var list = o.Users.ToList();
             return View(list);
         }
