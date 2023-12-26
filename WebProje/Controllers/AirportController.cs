@@ -7,7 +7,12 @@ namespace WebProje.Controllers
 {
     public class AirportController : Controller
     {
-        public OriAirlinesContext o = new OriAirlinesContext();
+        private readonly OriAirlinesContext o;
+        public AirportController(OriAirlinesContext o)
+        {
+            this.o = o;
+        }
+
         public IActionResult List()
         {
             var list = o.Airports.Include(x => x.City);

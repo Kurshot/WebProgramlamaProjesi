@@ -7,7 +7,11 @@ namespace WebProje.Controllers
 {
     public class TicketController : Controller
     {
-        public OriAirlinesContext o = new OriAirlinesContext();
+        private readonly OriAirlinesContext o;
+        public TicketController(OriAirlinesContext o)
+        {
+            this.o = o;
+        }
         public IActionResult List()
         {
             var list = o.Ticket.

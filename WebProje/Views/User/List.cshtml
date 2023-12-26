@@ -19,10 +19,7 @@
                 @Html.DisplayNameFor(model => model.Password)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.phoneNumber)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IsAdmin)
+                @Html.DisplayNameFor(model => model.PhoneNumber)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Gender)
@@ -49,17 +46,7 @@
                 @Html.DisplayFor(modelItem => item.Password)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.phoneNumber)
-            </td>
-            <td>
-                    @if (item.IsAdmin == true)
-                    {
-                        <p>Admin</p>
-                    }
-                    else
-                    {
-                        <p>Kullanıcı</p>
-                    }
+                @Html.DisplayFor(modelItem => item.PhoneNumber)
             </td>
             <td>
                     @if (item.Gender == true)

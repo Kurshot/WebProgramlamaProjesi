@@ -8,7 +8,11 @@ namespace WebProje.Controllers
 {
     public class FlightController : Controller
     {
-        public OriAirlinesContext o = new OriAirlinesContext();
+        private readonly OriAirlinesContext o;
+        public FlightController(OriAirlinesContext o)
+        {
+            this.o = o;
+        }
         public IActionResult List()
         {
             var list = o.Flights.
