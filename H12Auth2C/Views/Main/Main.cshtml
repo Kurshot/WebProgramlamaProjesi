@@ -1,0 +1,40 @@
+﻿<form asp-action="List" asp-controller="Main" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <label for="departureSelect">Departure City</label>
+        <select id="departureSelect" name="departurePlaceId" class="form-control">
+            @foreach (var city in ViewBag.Departure)
+            {
+                <option value="@city.Value">@city.Text</option>
+            }
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="arrivalSelect">Arrival City</label>
+        <select id="arrivalSelect" name="arrivalPlaceId" class="form-control">
+            @foreach (var city in ViewBag.Arrival)
+            {
+                <option value="@city.Value">@city.Text</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Main" class="btn btn-primary" />
+    </div>
+</form>
+
+
+<script>
+    function updateSelectedCity(selectElement, targetElementId) {
+        var selectedOption = selectElement.options[selectElement.selectedIndex].text;
+        var targetElement = document.getElementById(targetElementId);
+    }
+</script>
+
+<style>
+    .selected-city {
+        margin-top: 5px;
+        font-weight: bold;
+    }
+</style>

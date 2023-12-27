@@ -1,0 +1,36 @@
+﻿@model H12Auth2C.Models.Plane
+
+@{
+    ViewData["Title"] = "Add";
+}
+
+<h1>Add</h1>
+
+<h4>Plane</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Add">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CompanyId" class="control-label"></label>
+                <select asp-for="CompanyId" class="form-control" asp-items="ViewBag.CompanyName"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="PlaneTypeId" class="control-label"></label>
+                <select asp-for="PlaneTypeId" class="form-control" asp-items="ViewBag.PlaneTypeName"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="List">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
