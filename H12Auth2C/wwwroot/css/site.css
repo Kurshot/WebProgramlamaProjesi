@@ -16,3 +16,7 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+div.register-input{
+    margin-top: 2px;
+}
