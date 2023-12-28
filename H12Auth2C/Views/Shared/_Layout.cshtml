@@ -44,6 +44,15 @@
                                 <li class="nav-item">
                                     <a class="nav-link text-dark" asp-area="" asp-controller="PlaneType" asp-action="List">PlaneType</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="MyTickets" asp-action="MyTickets">My tickets</a>
+                                </li>
+                            }
+                            @if (User.IsInRole("Traveller"))
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="MyTickets" asp-action="MyTickets">My tickets</a>
+                                </li>
                             }
                         }
                     </ul>
