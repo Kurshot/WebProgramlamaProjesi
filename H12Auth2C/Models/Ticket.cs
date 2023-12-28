@@ -6,10 +6,9 @@ namespace H12Auth2C.Models
     {
         [Key]
         public int Id { get; set; }
-        public bool ticketType { get; set; }
-        public int UserId { get; set; }
+        public string UserId { get; set; }
         public int FlightId { get; set; }
-        public Flight Flight { get; set; }
-        public UserDetails User { get; set; }
+        public Flight? Flight { get; set; }
+        public UserDetails? User { get; set; }
     }
 }
