@@ -3,21 +3,27 @@ using H12Auth2C.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 
 namespace H12Auth2C.Controllers
 {
     [Authorize(Roles = UserRoles.Role_Admin)]
-    public class CompanyController : Controller
+    public class CallApiCompanyController : Controller
     {
         private readonly ApplicationDbContext o;
-        public CompanyController(ApplicationDbContext o)
+        public CallApiCompanyController(ApplicationDbContext o)
         {
             this.o = o;
         }
-        public IActionResult List()
+        [HttpGet]
+        public async Task<IActionResult> Index()
         {
-            var list = o.Company.ToList();
-            return View(list);
+            List<Company> c = new List<Company>();
+            HttpClient client = new HttpClient();
+            var response = await client.GetAsync("https://localhost:7090/api/ApiCompany");
+            var jsonResponse = await response.Content.ReadAsStringAsync();
+            c = JsonConvert.DeserializeObject<List<Company>>(jsonResponse);
+            return View(c);
         }
         [HttpGet]
         public IActionResult Add()
@@ -32,7 +38,7 @@ namespace H12Auth2C.Controllers
                 o.Company.Add(c);
                 o.SaveChanges();
                 TempData["msjco"] = "Şirket başarılı bir şekilde eklenmiştir";
-                return RedirectToAction("List");
+                return RedirectToAction("Index");
             }
             return View();
         }
@@ -41,23 +47,23 @@ namespace H12Auth2C.Controllers
             if (id == null)
             {
                 TempData["msjco"] = "Lütfen şirket seçiniz";
-                return RedirectToAction("List");
+                return RedirectToAction("Index");
             }
             var c = o.Company.Include(x => x.Planes).FirstOrDefault(y => y.Id == id);
             if (c is null)
             {
                 TempData["msjco"] = "Böyle bir şirket bulunamadı";
-                return RedirectToAction("List");
+                return RedirectToAction("Index");
             }
             if (c.Planes.Count > 0)
             {
                 TempData["msjco"] = "Bu şirketin uçakları var lütfen önce uçakları siliniz";
-                return RedirectToAction("List");
+                return RedirectToAction("Index");
             }
             TempData["msjco"] = "Şirket başarıyla silindi.";
             o.Company.Remove(c);
             o.SaveChanges();
-            return RedirectToAction("List");
+            return RedirectToAction("Index");
         }
         [HttpGet]
         public IActionResult Edit(int? id)
@@ -65,13 +71,13 @@ namespace H12Auth2C.Controllers
             if (id is null)
             {
                 TempData["msjco"] = "Lütfen bir şirket seçiniz";
-                return RedirectToAction("List");
+                return RedirectToAction("Index");
             }
             var c = o.Company.FirstOrDefault(x => x.Id == id);
             if (c is null)
             {
                 TempData["msjco"] = "Böyle bir şirket bulunamadı";
-                return RedirectToAction("List");
+                return RedirectToAction("Index");
             }
             return View(c);
         }
@@ -81,14 +87,14 @@ namespace H12Auth2C.Controllers
             if (id != c.Id)
             {
                 TempData["msjco"] = "Böyle bir şirket bulunamadi";
-                return RedirectToAction("List");
+                return RedirectToAction("Index");
             }
             if (ModelState.IsValid)
             {
                 o.Company.Update(c);
                 o.SaveChanges();
                 TempData["msjco"] = "Seçilen şirket güncellenmiştir";
-                return RedirectToAction("List");
+                return RedirectToAction("Index");
             }
             TempData["msjco"] = "Hata !";
             return View();
