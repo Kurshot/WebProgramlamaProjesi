@@ -33,7 +33,7 @@ namespace H12Auth2C.Controllers
             {
                 o.PlaneTypes.Add(pt);
                 o.SaveChanges();
-                TempData["msjco"] = "Uçaktipi başarılı bir şekilde eklenmiştir";
+                TempData["msjplanetype"] = "Uçaktipi başarılı bir şekilde eklenmiştir";
                 return RedirectToAction("List");
             }
             return View();
@@ -43,21 +43,21 @@ namespace H12Auth2C.Controllers
         {
             if (id == null)
             {
-                TempData["msjco"] = "Lütfen uçak modeli seçiniz";
+                TempData["msjplanetype"] = "Lütfen uçak modeli seçiniz";
                 return RedirectToAction("List");
             }
             var c = o.PlaneTypes.Include(x => x.Planes).FirstOrDefault(y => y.Id == id);
             if (c is null)
             {
-                TempData["msjco"] = "Böyle bir uçak modeli bulunamadı.";
+                TempData["msjplanetype"] = "Böyle bir uçak modeli bulunamadı.";
                 return RedirectToAction("List");
             }
             if (c.Planes.Count > 0)
             {
-                TempData["msjco"] = "Bu uçak modelinden kullanılan uçaklar var lütfen önce uçakları siliniz.";
+                TempData["msjplanetype"] = "Bu uçak modelinden kullanılan uçaklar var lütfen önce uçakları siliniz.";
                 return RedirectToAction("List");
             }
-            TempData["msjco"] = "Uçak türü kaldırıldı.";
+            TempData["msjplanetype"] = "Uçak türü kaldırıldı.";
             o.PlaneTypes.Remove(c);
             o.SaveChanges();
             return RedirectToAction("List");
@@ -67,13 +67,13 @@ namespace H12Auth2C.Controllers
         {
             if (id is null)
             {
-                TempData["msjco"] = "Lütfen bir uçak modeli seçiniz";
+                TempData["msjplanetype"] = "Lütfen bir uçak modeli seçiniz";
                 return RedirectToAction("List");
             }
             var c = o.PlaneTypes.FirstOrDefault(x => x.Id == id);
             if (c is null)
             {
-                TempData["msjco"] = "Böyle bir uçak türü bulunamadı";
+                TempData["msjplanetype"] = "Böyle bir uçak türü bulunamadı";
                 return RedirectToAction("List");
             }
             return View(c);
@@ -83,17 +83,17 @@ namespace H12Auth2C.Controllers
         {
             if (id != pt.Id)
             {
-                TempData["msjco"] = "Böyle bir uçak modeli  bulunamadi";
+                TempData["msjplanetype"] = "Böyle bir uçak modeli  bulunamadi";
                 return RedirectToAction("List");
             }
             if (ModelState.IsValid)
             {
                 o.PlaneTypes.Update(pt);
                 o.SaveChanges();
-                TempData["msjco"] = "Seçilen ülke güncellenmiştir";
+                TempData["msjplanetype"] = "Seçilen ülke güncellenmiştir";
                 return RedirectToAction("List");
             }
-            TempData["msjco"] = "Hata !";
+            TempData["msjplanetype"] = "Hata !";
             return View();
         }
     }

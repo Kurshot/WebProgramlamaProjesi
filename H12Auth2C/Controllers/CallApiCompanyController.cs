@@ -37,7 +37,7 @@ namespace H12Auth2C.Controllers
             {
                 o.Company.Add(c);
                 o.SaveChanges();
-                TempData["msjco"] = "Şirket başarılı bir şekilde eklenmiştir";
+                TempData["msjcompany"] = "Şirket başarılı bir şekilde eklenmiştir";
                 return RedirectToAction("Index");
             }
             return View();
@@ -46,21 +46,21 @@ namespace H12Auth2C.Controllers
         {
             if (id == null)
             {
-                TempData["msjco"] = "Lütfen şirket seçiniz";
+                TempData["msjcompany"] = "Lütfen şirket seçiniz";
                 return RedirectToAction("Index");
             }
             var c = o.Company.Include(x => x.Planes).FirstOrDefault(y => y.Id == id);
             if (c is null)
             {
-                TempData["msjco"] = "Böyle bir şirket bulunamadı";
+                TempData["msjcompany"] = "Böyle bir şirket bulunamadı";
                 return RedirectToAction("Index");
             }
             if (c.Planes.Count > 0)
             {
-                TempData["msjco"] = "Bu şirketin uçakları var lütfen önce uçakları siliniz";
+                TempData["msjcompany"] = "Bu şirketin uçakları var lütfen önce uçakları siliniz";
                 return RedirectToAction("Index");
             }
-            TempData["msjco"] = "Şirket başarıyla silindi.";
+            TempData["msjcompany"] = "Şirket başarıyla silindi.";
             o.Company.Remove(c);
             o.SaveChanges();
             return RedirectToAction("Index");
@@ -70,13 +70,13 @@ namespace H12Auth2C.Controllers
         {
             if (id is null)
             {
-                TempData["msjco"] = "Lütfen bir şirket seçiniz";
+                TempData["msjcompany"] = "Lütfen bir şirket seçiniz";
                 return RedirectToAction("Index");
             }
             var c = o.Company.FirstOrDefault(x => x.Id == id);
             if (c is null)
             {
-                TempData["msjco"] = "Böyle bir şirket bulunamadı";
+                TempData["msjcompany"] = "Böyle bir şirket bulunamadı";
                 return RedirectToAction("Index");
             }
             return View(c);
@@ -86,17 +86,17 @@ namespace H12Auth2C.Controllers
         {
             if (id != c.Id)
             {
-                TempData["msjco"] = "Böyle bir şirket bulunamadi";
+                TempData["msjcompany"] = "Böyle bir şirket bulunamadi";
                 return RedirectToAction("Index");
             }
             if (ModelState.IsValid)
             {
                 o.Company.Update(c);
                 o.SaveChanges();
-                TempData["msjco"] = "Seçilen şirket güncellenmiştir";
+                TempData["msjcompany"] = "Seçilen şirket güncellenmiştir";
                 return RedirectToAction("Index");
             }
-            TempData["msjco"] = "Hata !";
+            TempData["msjcompany"] = "Hata !";
             return View();
         }
     }

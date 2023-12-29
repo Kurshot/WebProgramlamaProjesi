@@ -34,7 +34,7 @@ namespace H12Auth2C.Controllers
             {
                 o.Cities.Add(c);
                 o.SaveChanges();
-                TempData["msjco"] = "Şehir başarılı bir şekilde eklenmiştir";
+                TempData["msjcity"] = "Şehir başarılı bir şekilde eklenmiştir";
                 return RedirectToAction("List");
             }
             ViewBag.CountryName = new SelectList(o.Countries, "Id", "Name");
@@ -44,18 +44,18 @@ namespace H12Auth2C.Controllers
         {
             if (id == null)
             {
-                TempData["msjco"] = "Lütfen şehir seçiniz";
+                TempData["msjcity"] = "Lütfen şehir seçiniz";
                 return RedirectToAction("List");
             }
             var c = o.Cities.Include(x => x.Airports).FirstOrDefault(y => y.Id == id);
             if (c is null)
             {
-                TempData["msjco"] = "Böyle bir şehir bulunamadı";
+                TempData["msjcity"] = "Böyle bir şehir bulunamadı";
                 return RedirectToAction("List");
             }
             if (c.Airports.Count > 0)
             {
-                TempData["msjco"] = "Bu şehirin havalimanları var lütfen önce onları siliniz";
+                TempData["msjcity"] = "Bu şehirin havalimanları var lütfen önce onları siliniz";
                 return RedirectToAction("List");
             }
             o.Cities.Remove(c);
@@ -68,13 +68,13 @@ namespace H12Auth2C.Controllers
             ViewBag.CountryName = new SelectList(o.Countries, "Id", "Name");
             if (id is null)
             {
-                TempData["msjco"] = "Lütfen bir şehir seçiniz";
+                TempData["msjcity"] = "Lütfen bir şehir seçiniz";
                 return RedirectToAction("List");
             }
             var c = o.Cities.FirstOrDefault(x => x.Id == id);
             if (c is null)
             {
-                TempData["msjco"] = "Böyle bir şehir bulunamadı";
+                TempData["msjcity"] = "Böyle bir şehir bulunamadı";
                 return RedirectToAction("List");
             }
             return View(c);
@@ -84,18 +84,18 @@ namespace H12Auth2C.Controllers
         {
             if (id != c.Id)
             {
-                TempData["msjco"] = "Böyle bir şehir bulunamadi";
+                TempData["msjcity"] = "Böyle bir şehir bulunamadi";
                 return RedirectToAction("List");
             }
             if (ModelState.IsValid)
             {
                 o.Cities.Update(c);
                 o.SaveChanges();
-                TempData["msjco"] = "Seçilen şehir güncellenmiştir";
+                TempData["msjcity"] = "Seçilen şehir güncellenmiştir";
                 return RedirectToAction("List");
             }
             ViewBag.CountryName = new SelectList(o.Countries, "Id", "Name");
-            TempData["msjco"] = "Hata !";
+            TempData["msjcity"] = "Hata !";
             return View();
         }
     }

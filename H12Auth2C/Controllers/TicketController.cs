@@ -26,18 +26,18 @@ namespace H12Auth2C.Controllers
         {
             if (id == null)
             {
-                TempData["msjt"] = "Lütfen bir bilet seçiniz";
+                TempData["msjticket"] = "Lütfen bir bilet seçiniz";
                 return View();
             }
             var ticket = o.Ticket.FirstOrDefault(y => y.Id == id);
             if (ticket is null)
             {
-                TempData["msjt"] = "Böyle bir bilet bulunamadi";
+                TempData["msjticket"] = "Böyle bir bilet bulunamadi";
                 return View();
             }
             o.Ticket.Remove(ticket);
             o.SaveChanges();
-            TempData["msjt"] = "Bilet silindi";
+            TempData["msjticket"] = "Bilet silindi";
             return RedirectToAction("List");
         }
     }

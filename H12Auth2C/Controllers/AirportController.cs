@@ -33,7 +33,7 @@ namespace H12Auth2C.Controllers
             {
                 o.Airports.Add(a);
                 o.SaveChanges();
-                TempData["msja"] = "Havalimanı eklendi";
+                TempData["msjairport"] = "Havalimanı eklendi";
                 return RedirectToAction("List");
             }
             ViewBag.CityName = new SelectList(o.Cities, "Id", "Name");
@@ -44,24 +44,24 @@ namespace H12Auth2C.Controllers
         {
             if (id == null)
             {
-                TempData["msja"] = "Lütfen bir havalimanı seçiniz";
+                TempData["msjairport"] = "Lütfen bir havalimanı seçiniz";
                 return RedirectToAction("List");
             }
             var flight = o.Airports.Include(x => x.Flights).Include(y => y.Flights1).FirstOrDefault(a => a.Id == id);
 
             if (flight is null)
             {
-                TempData["msja"] = "Böyle bir havalimanı bulunamadi";
+                TempData["msjairport"] = "Böyle bir havalimanı bulunamadi";
                 return RedirectToAction("List");
             }
             if (flight.Flights.Count > 0)
             {
-                TempData["msja"] = "Bu havalimanına ait biletler var önce biletleri siliniz";
+                TempData["msjairport"] = "Bu havalimanına ait biletler var önce biletleri siliniz";
                 return RedirectToAction("List");
             }
             o.Airports.Remove(flight);
             o.SaveChanges();
-            TempData["msja"] = "Havalimanı silindi";
+            TempData["msjairport"] = "Havalimanı silindi";
             return RedirectToAction("List");
         }
         [HttpGet]
@@ -70,14 +70,14 @@ namespace H12Auth2C.Controllers
             ViewBag.CityName = new SelectList(o.Cities, "Id", "Name");
             if (id == null)
             {
-                TempData["msja"] = "Lütfen bir havalimanı seçiniz";
+                TempData["msjairport"] = "Lütfen bir havalimanı seçiniz";
                 return RedirectToAction("List");
             }
             var flight = o.Airports.Include(x => x.Flights).Include(y => y.Flights1).FirstOrDefault(a => a.Id == id);
 
             if (flight is null)
             {
-                TempData["msja"] = "Böyle bir havalimanı bulunamadi";
+                TempData["msjairport"] = "Böyle bir havalimanı bulunamadi";
                 return RedirectToAction("List");
             }
             return View(flight);
@@ -87,18 +87,18 @@ namespace H12Auth2C.Controllers
         {
             if (a.Id != id)
             {
-                TempData["msja"] = "Böyle bir havalimanı bulunamadi";
+                TempData["msjairport"] = "Böyle bir havalimanı bulunamadi";
                 return RedirectToAction("List");
             }
             if (ModelState.IsValid)
             {
                 o.Airports.Update(a);
                 o.SaveChanges();
-                TempData["msja"] = "Havalimanı güncellenmiştir";
+                TempData["msjairport"] = "Havalimanı güncellenmiştir";
                 return RedirectToAction("List");
             }
             ViewBag.CityName = new SelectList(o.Cities, "Id", "Name");
-            TempData["msja"] = "Havalimanı güncelleme işlemi başarısız";
+            TempData["msjairport"] = "Havalimanı güncelleme işlemi başarısız";
             return View();
         }
     }

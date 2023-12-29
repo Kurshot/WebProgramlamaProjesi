@@ -35,7 +35,7 @@ namespace H12Auth2C.Controllers
             {
                 o.Planes.Add(c);
                 o.SaveChanges();
-                TempData["msjco"] = "Uçak başarılı bir şekilde eklenmiştir.";
+                TempData["msjplane"] = "Uçak başarılı bir şekilde eklenmiştir.";
                 return RedirectToAction("List");
             }
             ViewBag.CompanyName = new SelectList(o.Company, "Id", "Name");
@@ -46,18 +46,18 @@ namespace H12Auth2C.Controllers
         {
             if (id == null)
             {
-                TempData["msjco"] = "Lütfen uçak seçiniz";
+                TempData["msjplane"] = "Lütfen uçak seçiniz";
                 return RedirectToAction("List");
             }
             var c = o.Planes.Include(x => x.Flights).FirstOrDefault(y => y.Id == id);
             if (c is null)
             {
-                TempData["msjco"] = "Böyle bir uçak bulunamadı";
+                TempData["msjplane"] = "Böyle bir uçak bulunamadı";
                 return RedirectToAction("List");
             }
             if (c.Flights.Count > 0)
             {
-                TempData["msjco"] = "Bu uçağın uçuşu var lütfen önce uçuşu iptal ediniz";
+                TempData["msjplane"] = "Bu uçağın uçuşu var lütfen önce uçuşu iptal ediniz";
                 return RedirectToAction("List");
             }
             o.Planes.Remove(c);
@@ -71,13 +71,13 @@ namespace H12Auth2C.Controllers
             ViewBag.PlaneTypeName = new SelectList(o.PlaneTypes, "Id", "modelName");
             if (id is null)
             {
-                TempData["msjco"] = "Lütfen bir uçak seçiniz";
+                TempData["msjplane"] = "Lütfen bir uçak seçiniz";
                 return RedirectToAction("List");
             }
             var c = o.Planes.FirstOrDefault(x => x.Id == id);
             if (c is null)
             {
-                TempData["msjco"] = "Böyle bir uçak bulunamadı";
+                TempData["msjplane"] = "Böyle bir uçak bulunamadı";
                 return RedirectToAction("List");
             }
             return View(c);
@@ -87,19 +87,19 @@ namespace H12Auth2C.Controllers
         {
             if (id != c.Id)
             {
-                TempData["msjco"] = "Böyle bir uçak bulunamadi";
+                TempData["msjplane"] = "Böyle bir uçak bulunamadi";
                 return RedirectToAction("List");
             }
             if (ModelState.IsValid)
             {
                 o.Planes.Update(c);
                 o.SaveChanges();
-                TempData["msjco"] = "Seçilen uçak güncellenmiştir";
+                TempData["msjplane"] = "Seçilen uçak güncellenmiştir";
                 return RedirectToAction("List");
             }
             ViewBag.CompanyName = new SelectList(o.Company, "Id", "Name");
             ViewBag.PlaneTypeName = new SelectList(o.PlaneTypes, "Id", "modelName");
-            TempData["msjco"] = "Hata !";
+            TempData["msjplane"] = "Hata !";
             return View();
         }
     }

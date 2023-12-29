@@ -33,7 +33,7 @@ namespace H12Auth2C.Controllers
             {
                 o.Countries.Add(c);
                 o.SaveChanges();
-                TempData["msjco"] = "Ülke başarılı bir şekilde eklenmiştir";
+                TempData["msjcountry"] = "Ülke başarılı bir şekilde eklenmiştir";
                 return RedirectToAction("List");
             }
             return View();
@@ -43,21 +43,21 @@ namespace H12Auth2C.Controllers
         {
             if (id == null)
             {
-                TempData["msjco"] = "Lütfen ülke seçiniz";
+                TempData["msjcountry"] = "Lütfen ülke seçiniz";
                 return RedirectToAction("List");
             }
             var c = o.Countries.Include(x => x.Cities).FirstOrDefault(y => y.Id == id);
             if (c is null)
             {
-                TempData["msjco"] = "Böyle bir ülke bulunamadı";
+                TempData["msjcountry"] = "Böyle bir ülke bulunamadı";
                 return RedirectToAction("List");
             }
             if (c.Cities.Count > 0)
             {
-                TempData["msjco"] = "Bu ülkenin şehirleri var lütfen önce şehirleri siliniz";
+                TempData["msjcountry"] = "Bu ülkenin şehirleri var lütfen önce şehirleri siliniz";
                 return RedirectToAction("List");
             }
-            TempData["msjco"] = "Ülke başarıyla silindi.";
+            TempData["msjcountry"] = "Ülke başarıyla silindi.";
             o.Countries.Remove(c);
             o.SaveChanges();
             return RedirectToAction("List");
@@ -67,13 +67,13 @@ namespace H12Auth2C.Controllers
         {
             if (id is null)
             {
-                TempData["msjco"] = "Lütfen bir ülke seçiniz";
+                TempData["msjcountry"] = "Lütfen bir ülke seçiniz";
                 return RedirectToAction("List");
             }
             var c = o.Countries.FirstOrDefault(x => x.Id == id);
             if (c is null)
             {
-                TempData["msjco"] = "Böyle bir ülke bulunamadı";
+                TempData["msjcountry"] = "Böyle bir ülke bulunamadı";
                 return RedirectToAction("List");
             }
             return View(c);
@@ -83,17 +83,17 @@ namespace H12Auth2C.Controllers
         {
             if (id != c.Id)
             {
-                TempData["msjco"] = "Böyle bir ülke bulunamadi";
+                TempData["msjcountry"] = "Böyle bir ülke bulunamadi";
                 return RedirectToAction("List");
             }
             if (ModelState.IsValid)
             {
                 o.Countries.Update(c);
                 o.SaveChanges();
-                TempData["msjco"] = "Seçilen ülke güncellenmiştir";
+                TempData["msjcountry"] = "Seçilen ülke güncellenmiştir";
                 return RedirectToAction("List");
             }
-            TempData["msjco"] = "Hata !";
+            TempData["msjcountry"] = "Hata !";
             return View();
         }
     }

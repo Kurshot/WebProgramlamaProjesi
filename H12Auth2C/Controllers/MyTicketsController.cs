@@ -33,23 +33,11 @@ namespace H12Auth2C.Controllers
                         .Where(y => y.UserId == userID).ToList();
                     return View(myflight);
                 }
-                TempData["msj"] = "Böyle bir kullanıcı yoktur";
+                TempData["msjmyticket"] = "Böyle bir kullanıcı yoktur";
                 return RedirectToAction("Main", "Main");
             }
-            TempData["msj"] = "Lütfen giriş yapınız.";
+            TempData["msjmyticket"] = "Lütfen giriş yapınız.";
             return RedirectToAction("Main", "Main");
         }
-        //public IActionResult MyTickets(string? userId)
-        //{
-        //    var uselist = o.Users.Where(x => x.Id == userId).ToList();
-        //    if (uselist is null)
-        //    {
-        //        TempData["msj"] = "Böyle bir kullanıcı yok";
-        //        return RedirectToAction("Main", "Main");
-        //    }
-        //    var myflight = o.Ticket.Include(x => x.Flight).Where(y => y.UserId == userId).ToList();
-        //    return View(myflight);
-        //}
-
     }
 }

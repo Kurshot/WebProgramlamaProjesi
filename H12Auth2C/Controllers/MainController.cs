@@ -37,7 +37,7 @@ namespace H12Auth2C.Controllers
         [Authorize(Roles = "Admin,Traveller")]
         public async Task<IActionResult> TicketAdd()
         {
-            TempData["msj"] = "";
+            TempData["msjmain"] = "";
             if (User.Identity.IsAuthenticated)
             {
                 var user = await _userManager.GetUserAsync(User);
@@ -54,20 +54,20 @@ namespace H12Auth2C.Controllers
                         ticket.FlightId = flightId;
                         o.Add(ticket);
                         o.SaveChanges();
-                        TempData["msj"] = "Bilet alınmıştır";
+                        TempData["msjmain"] = "Bilet alınmıştır";
                         return RedirectToAction("Main");
                     }
                     else
                     {
-                        TempData["msj"] = "Böyle bir uçuş yok";
+                        TempData["msjmain"] = "Böyle bir uçuş yok";
                         return RedirectToAction("Main");
                     }
 
                 }
-                TempData["msj"] = "Böyle bir uçuş yok";
+                TempData["msjmain"] = "Böyle bir uçuş yok";
                 return RedirectToAction("Main");
             }
-            TempData["msj"] = "Lütfen giriş yapınız";
+            TempData["msjmain"] = "Lütfen giriş yapınız";
             return RedirectToAction("Main");
         }
     }
