@@ -11,9 +11,9 @@ namespace H12Auth2C.Models
         public string UserSoyad { get; set; }
         [Display(Name ="Gender")]
         public bool Gender { get; set; }
-
-        [Display(Name ="Birth Date")]
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
+        
+        [Display(Name = "Birth Date")]
+        [DisplayFormat(DataFormatString = "{dd/MM/yyyy}")]
         public DateTime birthdate { get; set; }
         public ICollection<Ticket>? Ticket { get; set; }
     }

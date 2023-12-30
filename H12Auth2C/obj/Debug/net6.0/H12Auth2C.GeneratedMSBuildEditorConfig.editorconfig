@@ -60,6 +60,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWlycG9ydFxMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/polat/source/repos/WebProgramlamaProjesi/H12Auth2C/Views/CallApiCompany/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FsbEFwaUNvbXBhbnlcQWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/polat/source/repos/WebProgramlamaProjesi/H12Auth2C/Views/CallApiCompany/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FsbEFwaUNvbXBhbnlcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/polat/source/repos/WebProgramlamaProjesi/H12Auth2C/Views/CallApiCompany/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FsbEFwaUNvbXBhbnlcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/polat/source/repos/WebProgramlamaProjesi/H12Auth2C/Views/City/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0eVxBZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -70,18 +82,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/polat/source/repos/WebProgramlamaProjesi/H12Auth2C/Views/City/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0eVxMaXN0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/polat/source/repos/WebProgramlamaProjesi/H12Auth2C/Views/Company/Add.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxBZGQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/polat/source/repos/WebProgramlamaProjesi/H12Auth2C/Views/Company/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxFZGl0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/polat/source/repos/WebProgramlamaProjesi/H12Auth2C/Views/Company/List.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/polat/source/repos/WebProgramlamaProjesi/H12Auth2C/Views/Country/Add.cshtml]
@@ -124,6 +124,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpblxNYWluLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/polat/source/repos/WebProgramlamaProjesi/H12Auth2C/Views/Main/TicketAdd.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpblxUaWNrZXRBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/polat/source/repos/WebProgramlamaProjesi/H12Auth2C/Views/MyTickets/MyTickets.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXlUaWNrZXRzXE15VGlja2V0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/polat/source/repos/WebProgramlamaProjesi/H12Auth2C/Views/PlaneType/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbmVUeXBlXEFkZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -158,6 +166,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/polat/source/repos/WebProgramlamaProjesi/H12Auth2C/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/polat/source/repos/WebProgramlamaProjesi/H12Auth2C/Views/Ticket/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlja2V0XExpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/polat/source/repos/WebProgramlamaProjesi/H12Auth2C/Views/_ViewImports.cshtml]

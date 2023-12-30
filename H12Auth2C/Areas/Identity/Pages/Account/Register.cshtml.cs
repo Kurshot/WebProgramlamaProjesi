@@ -73,11 +73,11 @@ namespace H12Auth2C.Areas.Identity.Pages.Account
         {
 
             [Required]
-            [Display(Name = "Kullanıcı adı")]
+            [Display(Name = "Name")]
             public string UserAd { get; set; }
 
             [Required]
-            [Display(Name = "Kullanıcı soyadı")]
+            [Display(Name = "Last Name")]
             public string UserSoyad { get; set; }
             /// <summary>
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
@@ -93,9 +93,9 @@ namespace H12Auth2C.Areas.Identity.Pages.Account
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
             [Required]
-            [StringLength(100, ErrorMessage = "{0} en az {2} en çok {1} karakter uzunluğunda olmalıdır.", MinimumLength = 6)]
+            [StringLength(100, ErrorMessage = "The {0} en az {2} en çok {1} karakter uzunluğunda olmalıdır.", MinimumLength = 6)]
             [DataType(DataType.Password)]
-            [Display(Name = "Şifre")]
+            [Display(Name = "Password")]
             public string Password { get; set; }
 
             /// <summary>
@@ -103,14 +103,14 @@ namespace H12Auth2C.Areas.Identity.Pages.Account
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
             [DataType(DataType.Password)]
-            [Display(Name = "Şifre Doğrulama")]
-            [Compare("Password", ErrorMessage = "Şifreler birbirleri ile eşleşmiyor")]
+            [Display(Name = "Confirm Password")]
+            [Compare("Password", ErrorMessage = "Passwords don't match.")]
             public string ConfirmPassword { get; set; }
-            [Display(Name ="Cinsiyet")]
+            [Display(Name ="Gender")]
             public bool Gender { get; set; }
 
-            [Display(Name = "Doğum tarihi")]
-            [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
+            [Display(Name = "Birth Date")]
+            [DisplayFormat(DataFormatString = "{dd/MM/yyyy}")]
             public DateTime birthdate { get; set; }
         }
 

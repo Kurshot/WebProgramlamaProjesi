@@ -7,9 +7,9 @@ namespace H12Auth2C.Models
     {
         [Key]
         public int Id { get; set; }
-        [Display(Name = "Company Name")]
+        [Display(Name = "Compamy Name")]
         public string Name { get; set; }
-        [Display(Name = "Company Logo")]
+        [Display(Name = "Compamy Logo")]
         public string Logo { get; set; }
         public ICollection<Plane>? Planes { get; set; }
     }

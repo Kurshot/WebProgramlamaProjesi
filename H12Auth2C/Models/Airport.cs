@@ -11,6 +11,7 @@ namespace H12Auth2C.Models
         [Display(Name = "Airport Code")]
         public string AirportCode { get; set; }
         public int CityId { get; set; }
+        [Display(Name = "City")]
         public City? City { get; set; }
         public ICollection<Flight>? Flights { get; set; }
         public ICollection<Flight>? Flights1 { get; set; }
