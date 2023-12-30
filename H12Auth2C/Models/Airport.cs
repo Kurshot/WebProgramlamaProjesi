@@ -6,9 +6,9 @@ namespace H12Auth2C.Models
     {
         [Key]
         public int Id { get; set; }
-        [Display(Name = "Havalimanı Adı")]
+        [Display(Name = "Airport Name")]
         public string AirportName { get; set; }
-        [Display(Name = "Havalimanı Kodu")]
+        [Display(Name = "Airport Code")]
         public string AirportCode { get; set; }
         public int CityId { get; set; }
         public City? City { get; set; }

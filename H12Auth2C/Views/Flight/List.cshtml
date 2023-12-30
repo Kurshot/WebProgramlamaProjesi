@@ -1,58 +1,98 @@
 ﻿@model IEnumerable<H12Auth2C.Models.Flight>
-<a style="color:red">@TempData["msjf"]</a>
-<p>
-    <a asp-action="Add">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.departureTime)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.arrivalTime)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Plane)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.price)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.departurePlaceId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.arrivalPlaceId)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.departureTime)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.arrivalTime)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Plane.PlaneType.modelName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.price)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.departurePlace.AirportName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.arrivalPlace.AirportName)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+
+<style>
+    /* Add your custom styles for the table */
+    .table-container {
+        margin-top: 20px;
+    }
+
+        .table-container table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .table-container th, .table-container td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .table-container th {
+            background-color: #007bff;
+            color: #ffffff;
+        }
+
+        .table-container tbody tr:hover {
+            background-color: #f5f5f5;
+        }
+
+    .btn-link {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+        .btn-link:hover {
+            text-decoration: underline;
+        }
+</style>
+
+<div class="table-container">
+    <p>
+        <a class="btn btn-primary" asp-action="Add">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.departureTime)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.arrivalTime)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Plane)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.price)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.departurePlaceId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.arrivalPlaceId)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.departureTime)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.arrivalTime)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Plane.PlaneType.modelName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.price)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.departurePlace.AirportName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.arrivalPlace.AirportName)
+                    </td>
+                    <td>
+                        <a class="btn btn-info btn-sm" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                        <a class="btn btn-danger btn-sm" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

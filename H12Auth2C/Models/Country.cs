@@ -6,7 +6,7 @@ namespace H12Auth2C.Models
     {
         [Key]
         public int Id { get; set; }
-        [Display(Name = "Ülke Adı")]
+        [Display(Name = "Country Name")]
         public string Name { get; set; }
         public ICollection<City>? Cities { get; set; }
     }

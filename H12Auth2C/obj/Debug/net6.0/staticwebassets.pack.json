@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\H12Auth2C.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\polat\\source\\repos\\WebProgramlamaProjesi\\H12Auth2C\\wwwroot\\css\\LayoutStyle.css",
+      "PackagePath": "staticwebassets\\css\\LayoutStyle.css"
+    },
+    {
+      "Id": "C:\\Users\\polat\\source\\repos\\WebProgramlamaProjesi\\H12Auth2C\\wwwroot\\css\\LoginRegister.css",
+      "PackagePath": "staticwebassets\\css\\LoginRegister.css"
+    },
+    {
       "Id": "C:\\Users\\polat\\source\\repos\\WebProgramlamaProjesi\\H12Auth2C\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

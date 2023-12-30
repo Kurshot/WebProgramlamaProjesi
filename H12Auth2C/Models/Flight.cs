@@ -8,19 +8,19 @@ namespace H12Auth2C.Models
     {
         [Key]
         public int Id { get; set; }
-        [Display(Name = "Kalkış Zamanı")]
+        [Display(Name = "Departure Time")]
         public DateTime departureTime { get; set; }
-        [Display(Name = "Varış Zamanı")]
+        [Display(Name = "Arrival Time")]
         public DateTime arrivalTime { get; set; }
-        [Display(Name = "Uçak Türü")]
+        [Display(Name = "Plane Type")]
         public int PlaneId { get; set; }
         public Plane? Plane { get; set; }
-        [Display(Name = "Bilet Fiyatı")]
+        [Display(Name = "Ticket Price")]
         public float price { get; set; }
-        [Display(Name = "Kalkış Yeri")]
+        [Display(Name = "Departure Place")]
         public int? departurePlaceId { get; set; }
         public Airport? departurePlace { get; set; }
-        [Display(Name = "Varış Yeri")]
+        [Display(Name = "Arrival Place")]
         public int? arrivalPlaceId { get; set; }
         public Airport? arrivalPlace { get; set; }
         public ICollection<Ticket>? Tickets { get; set; }

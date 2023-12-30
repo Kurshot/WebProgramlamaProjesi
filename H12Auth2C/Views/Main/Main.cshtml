@@ -1,42 +1,80 @@
-﻿<a style="color:red">@TempData["msj"]</a>
-<a style="color:red">@TempData["msjmyticket"]</a>
-<form asp-action="List" asp-controller="Main" method="post">
-    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-    <div class="form-group">
-        <label for="departureSelect">Departure City</label>
-        <select id="departureSelect" name="departurePlaceId" class="form-control">
-            @foreach (var city in ViewBag.Departure)
-            {
-                <option value="@city.Value">@city.Text</option>
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Selling Website</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #343a40;
+        }
+
+        .form-group label {
+            color: #343a40;
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3;
+                border-color: #0056b3;
             }
-        </select>
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mt-5">Find Tickets</h1>
+        <form asp-action="List" asp-controller="Main" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label for="departureSelect">Departure City</label>
+                <select id="departureSelect" name="departurePlaceId" class="form-control">
+                    @foreach (var city in ViewBag.Departure)
+                    {
+                        <option value="@city.Value">@city.Text</option>
+                    }
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="arrivalSelect">Arrival City</label>
+                <select id="arrivalSelect" name="arrivalPlaceId" class="form-control">
+                    @foreach (var city in ViewBag.Arrival)
+                    {
+                        <option value="@city.Value">@city.Text</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Search" class="btn btn-primary" />
+            </div>
+        </form>
     </div>
-
-    <div class="form-group">
-        <label for="arrivalSelect">Arrival City</label>
-        <select id="arrivalSelect" name="arrivalPlaceId" class="form-control">
-            @foreach (var city in ViewBag.Arrival)
-            {
-                <option value="@city.Value">@city.Text</option>
-            }
-        </select>
-    </div>
-    <div class="form-group">
-        <input type="submit" value="Main" class="btn btn-primary" />
-    </div>
-</form>
-
-
-<script>
-    function updateSelectedCity(selectElement, targetElementId) {
-        var selectedOption = selectElement.options[selectElement.selectedIndex].text;
-        var targetElement = document.getElementById(targetElementId);
-    }
-</script>
-
-<style>
-    .selected-city {
-        margin-top: 5px;
-        font-weight: bold;
-    }
-</style>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#departureSelect, #arrivalSelect").change(function () {
+                var selectedOption = $(this).find("option:selected").text();
+                $("#" + $(this).attr("id") + "City").text(selectedOption);
+            });
+        });
+    </script>
+</body>
+</html>

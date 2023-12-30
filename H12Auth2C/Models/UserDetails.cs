@@ -5,14 +5,14 @@ namespace H12Auth2C.Models
 {
     public class UserDetails:IdentityUser
     {
-        [Display(Name ="Kullanıcı Adı")]
+        [Display(Name ="Name")]
         public string UserAd { get; set; }
-        [Display(Name = "Kullanıcı Soyadı")]
+        [Display(Name = "Last Name")]
         public string UserSoyad { get; set; }
-        [Display(Name ="Cinsiyet")]
+        [Display(Name ="Gender")]
         public bool Gender { get; set; }
 
-        [Display(Name ="Doğum tarihi")]
+        [Display(Name ="Birth Date")]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime birthdate { get; set; }
         public ICollection<Ticket>? Ticket { get; set; }
