@@ -23,6 +23,10 @@ namespace H12Auth2C.Controllers
         {
             ViewBag.Departure = new SelectList(o.Cities, "Id", "Name");
             ViewBag.Arrival = new SelectList(o.Cities, "Id", "Name");
+            ViewBag.Card1 = o.Cities.Where(x => x.Id == 1).FirstOrDefault();
+            ViewBag.Card2 = o.Cities.Where(x => x.Id == 2).FirstOrDefault();
+            ViewBag.Card3 = o.Cities.Where(x => x.Id == 3).FirstOrDefault();
+
             return View();
         }
         [HttpPost]
