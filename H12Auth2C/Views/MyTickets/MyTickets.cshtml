@@ -15,12 +15,14 @@
                 @Html.DisplayNameFor(model => model.Flight.arrivalTime)
             </th>
             <th>
-                Adı
+                Name
             </th>
             <th>
-                Soyadı
+                Last Name
             </th>
-            <th></th>
+            <th>
+                @Html.DisplayNameFor(model => model.SeatNumber)
+            </th>
         </tr>
     </thead>
     <tbody>
@@ -46,6 +48,9 @@
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.User.UserSoyad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SeatNumber)
                 </td>
             </tr>
         }

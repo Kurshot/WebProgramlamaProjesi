@@ -33,6 +33,17 @@ namespace H12Auth2C.Controllers
             {
                 o.PlaneTypes.Add(pt);
                 o.SaveChanges();
+                for (int i = 1; i <= pt.Capacity; i++)
+                {
+                    var newSeat = new Seat
+                    {
+                        PlaneTypeId = pt.Id,
+                        SeatName = i,
+                        IsReserve = false
+                    };
+                    o.Seats.Add(newSeat);
+                }
+                o.SaveChanges();
                 TempData["msjplanetype"] = "Uçaktipi başarılı bir şekilde eklenmiştir";
                 return RedirectToAction("List");
             }

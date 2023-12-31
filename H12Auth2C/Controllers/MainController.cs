@@ -1,5 +1,6 @@
 ﻿using H12Auth2C.Data;
 using H12Auth2C.Models;
+using MessagePack.Formatters;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.DataProtection.XmlEncryption;
 using Microsoft.AspNetCore.Identity;
@@ -30,12 +31,14 @@ namespace H12Auth2C.Controllers
           var list = o.Flights.
               Include(x => x.departurePlace).
               Include(y => y.arrivalPlace).
-              Include(z => z.Plane.PlaneType).Where(x => x.departurePlaceId == departurePlaceId&&x.arrivalPlaceId==arrivalPlaceId).ToList();
+              Include(z => z.Plane.PlaneType).
+              Where(x => x.departurePlaceId == departurePlaceId&&x.arrivalPlaceId==arrivalPlaceId).
+              ToList();
             TempData["id"] = o.Flights.Where(x => x.departurePlaceId == departurePlaceId && x.arrivalPlaceId == arrivalPlaceId).Select(u=>u.Id).FirstOrDefault();
            return View(list);
         }
         [Authorize(Roles = "Admin,Traveller")]
-        public async Task<IActionResult> TicketAdd()
+        public async Task<IActionResult> TicketAdd(int SeatName)
         {
             TempData["msjmain"] = "";
             if (User.Identity.IsAuthenticated)
@@ -46,16 +49,36 @@ namespace H12Auth2C.Controllers
                     ViewBag.UserId = user.Id;
                     var ticket = new Ticket
                     {
-                        UserId = ViewBag.UserId
+                        UserId = ViewBag.UserId,
+                        SeatNumber = SeatName,
                     };
 
                     if (TempData.ContainsKey("id") && TempData["id"] is int flightId)
                     {
-                        ticket.FlightId = flightId;
-                        o.Add(ticket);
-                        o.SaveChanges();
-                        TempData["msjmain"] = "Bilet alınmıştır";
-                        return RedirectToAction("Main");
+                        var isSeatReserved = o.Flights
+                           .Where(f => f.Id == flightId)
+                           .SelectMany(f => f.Plane.PlaneType.Seats) 
+                           .Any(s => s.SeatName == SeatName && s.IsReserve);
+                        var planeTypeId = o.Flights
+                             .Where(f => f.Id == flightId)
+                             .Select(f => f.Plane.PlaneType.Id)
+                             .FirstOrDefault();
+                        if(isSeatReserved == false)
+                        {
+                            var buyTicket = o.Seats.FirstOrDefault(f => f.PlaneTypeId == planeTypeId && f.SeatName == SeatName);
+                            if(buyTicket is not null) { buyTicket.IsReserve = true; }
+                            ticket.FlightId = flightId;
+                            o.Add(ticket);
+                            o.SaveChanges();
+                            TempData["msjmain"] = "Bilet alınmıştır";
+                            return RedirectToAction("Main");
+                        }
+                        else
+                        {
+                            TempData["msjmain"] = "Bu koltuk dolu.";
+                            return RedirectToAction("Main");
+                        }
+                        
                     }
                     else
                     {

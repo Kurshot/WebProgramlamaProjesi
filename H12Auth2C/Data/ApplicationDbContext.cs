@@ -32,6 +32,7 @@ namespace H12Auth2C.Data
         public DbSet<PlaneType> PlaneTypes { get; set; }
         public DbSet<UserDetails> Users { get; set; }
         public DbSet<Flight> Flights { get; set; }
+        public DbSet<Seat> Seats { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);

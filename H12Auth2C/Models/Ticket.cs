@@ -9,6 +9,7 @@ namespace H12Auth2C.Models
         [Display(Name = "Ticket Holder")]
         public string UserId { get; set; }
         public int FlightId { get; set; }
+        public int SeatNumber { get; set; }
         public Flight? Flight { get; set; }
         public UserDetails? User { get; set; }
     }

@@ -1,14 +1,4 @@
 ﻿@model IEnumerable<H12Auth2C.Models.Flight>
-
-@{
-    ViewData["Title"] = "List";
-}
-
-<h1>List</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
 <table class="table">
     <thead>
         <tr>
@@ -53,6 +43,20 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.arrivalPlace.AirportName)
+            </td>
+            <td>
+                <td>
+                    <form method="post" action="TicketAdd">
+                        <label for="SeatName">Seat Number:</label>
+                        <select name="SeatName" id="SeatName">
+                                @for (int i = 1; i <= item.Plane.PlaneType.Capacity; i++)
+                                {
+                                <option value="@i">Seat @i</option>
+                                }
+                        </select>
+                        <input type="submit" value="Buy Ticket">
+                    </form>
+                </td>
             </td>
         </tr>
 }
