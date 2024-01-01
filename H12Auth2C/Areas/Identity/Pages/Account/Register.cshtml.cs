@@ -93,7 +93,7 @@ namespace H12Auth2C.Areas.Identity.Pages.Account
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
             [Required]
-            [StringLength(100, ErrorMessage = "The {0} en az {2} en çok {1} karakter uzunluğunda olmalıdır.", MinimumLength = 6)]
+            [StringLength(100, ErrorMessage = "The {0} en az {2} en çok {1} karakter uzunluğunda olmalıdır.", MinimumLength = 2)]
             [DataType(DataType.Password)]
             [Display(Name = "Password")]
             public string Password { get; set; }

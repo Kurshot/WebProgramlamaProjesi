@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using System.Drawing;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace H12Auth2C.Controllers
 {
@@ -19,10 +21,18 @@ namespace H12Auth2C.Controllers
             this.o = o;
             this._userManager = userManager;
         }
+        [HttpGet]
         public IActionResult Main()
         {
             ViewBag.Departure = new SelectList(o.Cities, "Id", "Name");
             ViewBag.Arrival = new SelectList(o.Cities, "Id", "Name");
+            var cities = o.Cities.Take(3).ToList(); // En fazla 3 şehiri alıyoruz
+
+            ViewBag.CardImages = cities.Select(c => c.CityImage).ToList(); // Şehir görsellerini ViewBag'e ekleme
+            ViewBag.CityNames = cities.Select(c => c.Name).ToList(); // Şehir isimlerini ViewBag'e ekleme
+
+            ViewBag.NumberOfCities = cities.Count(); // Şehir sayısını ViewBag'e ekleme
+
             return View();
         }
         [HttpPost]

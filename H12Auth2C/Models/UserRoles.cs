@@ -2,7 +2,7 @@
 
 namespace H12Auth2C.Models
 {
-    public static class UserRoles
+    public class UserRoles
     {
         public const string Role_Admin = "Admin";
         public const string Role_Traveller = "Traveller";

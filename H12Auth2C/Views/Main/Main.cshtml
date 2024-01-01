@@ -3,75 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ticket Selling Website</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <title>Find Tickets</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        .container {
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        h1 {
-            color: #343a40;
-        }
-
-        .form-group label {
-            color: #343a40;
-            font-weight: bold;
-        }
-
-        .btn-primary {
-            background-color: #007bff;
-            border-color: #007bff;
-        }
-
-            .btn-primary:hover {
-                background-color: #0056b3;
-                border-color: #0056b3;
-            }
-    </style>
+    <script src="https://kit.fontawesome.com/c24911ab6e.js" crossorigin="anonymous"></script>
 </head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    .container {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        color: #343a40;
+        margin-bottom: 50px;
+    }
+
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .form-group label {
+        color: #343a40;
+        font-weight: bold;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+    .flight-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .flight-header {
+        padding: 0;
+    }
+
+    .flight-main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 5%;
+        background-color: #F4F5F7;
+        border-bottom-left-radius: 3%;
+        border-bottom-right-radius: 3%;
+        padding-bottom: 15%;
+        padding-top: 15%;
+    }
+
+    .flight-header-item-list {
+        list-style-type: none;
+        padding-left: 0;
+        margin-bottom: 0;
+    }
+
+    .flight-header-item {
+        display: flex;
+        justify-content: center;
+        background-color: #F4F5F7;
+        font-size: 24px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .selected-tab {
+        background: white;
+        border-bottom: none;
+    }
+
+    .first {
+        border-right: 1px solid gray;
+    }
+
+    a > i {
+        margin-right: 15px;
+    }
+
+    /* Added styling for cards */
+    .card {
+        width: 100%; /* Use full width of the container */
+        margin: 1rem; /* Add margin to create space between cards */
+    }
+
+        .card img {
+            max-height: 200px;
+            object-fit: cover;
+        }
+</style>
 <body>
-    <a style="color:red">@TempData["msjmain"]</a>
-    <a style="color:red">@TempData["msjmyticket"]</a>
+    <a style="color :red">@TempData["msjmyticket"]</a>
+    <a style="color :red">@TempData["msjmain"]</a>
     <div class="container">
         <h1 class="text-center mt-5">Find Tickets</h1>
         <form asp-action="List" asp-controller="Main" method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label for="departureSelect">Departure City</label>
-                <select id="departureSelect" name="departurePlaceId" class="form-control">
-                    @foreach (var city in ViewBag.Departure)
-                    {
-                        <option value="@city.Value">@city.Text</option>
-                    }
-                </select>
-            </div>
+            <div class="flight-container col">
+                <div class="flight-header container">
+                    <ul class="flight-header-item-list row">
+                        <li class="flight-header-item col selected-tab first">
+                            <a href="javascript:void(0);" onclick="toggleTab('searchTab')">
+                                <i class="fas fa-plane"></i> Search for a flight
+                            </a>
+                        </li>
+                        <li class="flight-header-item col">
+                            <a href="@Url.Action("MyTickets", "MyTickets")">
+                                <i class="fas fa-ticket"></i> My Flights
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
-            <div class="form-group">
-                <label for="arrivalSelect">Arrival City</label>
-                <select id="arrivalSelect" name="arrivalPlaceId" class="form-control">
-                    @foreach (var city in ViewBag.Arrival)
-                    {
-                        <option value="@city.Value">@city.Text</option>
-                    }
-                </select>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Search" class="btn btn-primary" />
+                <div id="searchTab" class="flight-main container">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    <div class="form-group col">
+                        <label for="departureSelect">Departure City</label>
+                        <select id="departureSelect" name="departurePlaceId" class="form-control">
+                            @foreach (var city in ViewBag.Departure)
+                            {
+                                <option value="@city.Value">@city.Text</option>
+                            }
+                        </select>
+                    </div>
+
+                    <div class="form-group col">
+                        <label for="arrivalSelect">Arrival City</label>
+                        <select id="arrivalSelect" name="arrivalPlaceId" class="form-control">
+                            @foreach (var city in ViewBag.Arrival)
+                            {
+                                <option value="@city.Value">@city.Text</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="form-group col">
+                        <input type="submit" value="Search" class="btn btn-primary" />
+                    </div>
+                </div>
             </div>
         </form>
+
+        <!-- Cards Section -->
+        @if (ViewBag.CardImages != null && ViewBag.CityNames != null && ViewBag.NumberOfCities >= 3)
+        {
+            <div class="row">
+                @for (int i = 0; i < ViewBag.CardImages.Count; i++)
+                {
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="@ViewBag.CardImages[i]" class="card-img-top" alt="Image @(i + 1)">
+                            <div class="card-body">
+                                <h5 class="card-title">@ViewBag.CityNames[i]</h5>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src="scripts.js"></script>
     <script>
+        function toggleTab(tabId) {
+            $('.flight-main').hide();
+            $('#' + tabId).show();
+        }
+
         $(document).ready(function () {
+            toggleTab('searchTab');
+
             $("#departureSelect, #arrivalSelect").change(function () {
                 var selectedOption = $(this).find("option:selected").text();
                 $("#" + $(this).attr("id") + "City").text(selectedOption);

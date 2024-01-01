@@ -17,6 +17,7 @@ namespace H12Auth2C.Controllers
             this._userManager = userManager;
         }
         [Authorize(Roles = "Admin,Traveller")]
+        [HttpGet]
         public async Task<IActionResult> MyTickets()
         {
             if (User.Identity.IsAuthenticated)
