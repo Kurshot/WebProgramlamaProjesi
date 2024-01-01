@@ -18,6 +18,14 @@
         },
         "runtime": {
           "H12Auth2C.dll": {}
+        },
+        "resources": {
+          "en-US/H12Auth2C.resources.dll": {
+            "locale": "en-US"
+          },
+          "tr-TR/H12Auth2C.resources.dll": {
+            "locale": "tr-TR"
+          }
         }
       },
       "Humanizer/2.14.1": {

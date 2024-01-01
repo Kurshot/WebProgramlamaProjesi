@@ -1,4 +1,5 @@
 ﻿using H12Auth2C.Data;
+using H12Auth2C.Languages;
 using H12Auth2C.Models;
 using MessagePack.Formatters;
 using Microsoft.AspNetCore.Authorization;
@@ -7,6 +8,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Localization;
 using System.Drawing;
 using static System.Net.Mime.MediaTypeNames;
 
@@ -16,14 +18,22 @@ namespace H12Auth2C.Controllers
     {
         private readonly ApplicationDbContext o;
         private readonly UserManager<UserDetails> _userManager;
-        public MainController(ApplicationDbContext o,UserManager<UserDetails> userManager)
+        private readonly IStringLocalizer<Lang> stringLocalizer;
+        public MainController(ApplicationDbContext o,UserManager<UserDetails> userManager, IStringLocalizer<Lang> stringLocalizer)
         {
             this.o = o;
             this._userManager = userManager;
+            this.stringLocalizer = stringLocalizer;
         }
         [HttpGet]
         public IActionResult Main()
         {
+            ViewBag.DeparturePlace = stringLocalizer["departureplace"];
+            ViewBag.ArrivalPlace = stringLocalizer["arrivalplace"];
+            ViewBag.Ticket = stringLocalizer["ticket"];
+            ViewBag.Language = stringLocalizer["language"];
+            ViewBag.flight = stringLocalizer["search"];
+            ViewBag.myticket = stringLocalizer["myticket"];
             ViewBag.Departure = new SelectList(o.Cities, "Id", "Name");
             ViewBag.Arrival = new SelectList(o.Cities, "Id", "Name");
             var cities = o.Cities.Take(3).ToList(); // En fazla 3 şehiri alıyoruz

@@ -17,7 +17,7 @@
             @foreach (var item in Model)
             {
                 <tr>
-                    <td>
+                    <td style="background-color:lightgray">
                         @Html.DisplayFor(modelItem => item.Flight.departurePlace.City.Name)<br>
                         @Html.DisplayFor(modelItem => item.Flight.departurePlace.AirportName)
                     </td>
@@ -25,12 +25,14 @@
                         @Html.DisplayFor(modelItem => item.Flight.arrivalPlace.City.Name)<br>
                         @Html.DisplayFor(modelItem => item.Flight.arrivalPlace.AirportName)
                     </td>
-                    <td>@Html.DisplayFor(modelItem => item.Flight.departureTime)</td>
+                    <td style="background-color:lightgray">@Html.DisplayFor(modelItem => item.Flight.departureTime)</td>
                     <td>@Html.DisplayFor(modelItem => item.Flight.arrivalTime)</td>
-                    <td>@Html.DisplayFor(modelItem => item.User.UserAd)</td>
+                    <td style="background-color:lightgray">@Html.DisplayFor(modelItem => item.User.UserAd)</td>
                     <td>@Html.DisplayFor(modelItem => item.User.UserSoyad)</td>
-                    <td>@Html.DisplayFor(modelItem => item.SeatNumber)</td>
+                    <td style="background-color:lightgray">@Html.DisplayFor(modelItem => item.SeatNumber)</td>
+
                 </tr>
+
             }
         </tbody>
     </table>

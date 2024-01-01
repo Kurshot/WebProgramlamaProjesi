@@ -1944,3 +1944,10 @@ C:\Users\polat\Desktop\WebProgramlamaProjesi-kursatbranchson\H12Auth2C\obj\Debug
 C:\Users\polat\Desktop\WebProgramlamaProjesi-kursatbranchson\H12Auth2C\obj\Debug\net6.0\H12Auth2C.pdb
 C:\Users\polat\Desktop\WebProgramlamaProjesi-kursatbranchson\H12Auth2C\obj\Debug\net6.0\H12Auth2C.genruntimeconfig.cache
 C:\Users\polat\Desktop\WebProgramlamaProjesi-kursatbranchson\H12Auth2C\obj\Debug\net6.0\ref\H12Auth2C.dll
+C:\Users\polat\source\repos\WebProgramlamaProjesi\H12Auth2C\obj\Debug\net6.0\H12Auth2C.Resources.Languages.Lang.en-US.resources
+C:\Users\polat\source\repos\WebProgramlamaProjesi\H12Auth2C\obj\Debug\net6.0\H12Auth2C.Resources.Languages.Lang.tr-TR.resources
+C:\Users\polat\source\repos\WebProgramlamaProjesi\H12Auth2C\obj\Debug\net6.0\H12Auth2C.csproj.GenerateResource.cache
+C:\Users\polat\source\repos\WebProgramlamaProjesi\H12Auth2C\bin\Debug\net6.0\en-US\H12Auth2C.resources.dll
+C:\Users\polat\source\repos\WebProgramlamaProjesi\H12Auth2C\bin\Debug\net6.0\tr-TR\H12Auth2C.resources.dll
+C:\Users\polat\source\repos\WebProgramlamaProjesi\H12Auth2C\obj\Debug\net6.0\en-US\H12Auth2C.resources.dll
+C:\Users\polat\source\repos\WebProgramlamaProjesi\H12Auth2C\obj\Debug\net6.0\tr-TR\H12Auth2C.resources.dll
